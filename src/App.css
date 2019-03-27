@@ -31,3 +31,15 @@
     transform: rotate(360deg);
   }
 }
+
+.link {
+  margin: 0 4px;
+  padding: 8px 12px;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #222222;
+  border-radius: 4px;
+  display: inline-block;
+  background: #eee;
+}
