@@ -23,10 +23,16 @@ class App extends Component {
         return (
                 <MuiThemeProvider>
                     <BrowserRouter>
-                        <nav>
-                            <Link to="/" className="link">Home</Link>
-                            <Link to="/test"  className="link">Test</Link>
-                        </nav>
+                        <header className="header">
+                            <a href="/" >
+                                <img src="electron-logo.png" alt="LOGO" class="logo"/>
+                            </a>
+
+                            <nav>
+                                <Link to="/" className="link">Home</Link>
+                                <Link to="/test"  className="link">Test</Link>
+                            </nav>
+                        </header>
 
                         <Route path="/" exact={true} component={Home}/>
                         <Route path="/test" component={Test}/>
