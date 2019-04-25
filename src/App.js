@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import {BrowserRouter, Link, Route} from 'react-router-dom';
 import './App.css';
-import {Home} from "./Home";
-import {Test} from "./Test";
+
+import {Header} from "./components/Header";
 import RaisedButton from 'material-ui/RaisedButton';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
@@ -23,20 +23,7 @@ class App extends Component {
         return (
                 <MuiThemeProvider>
                     <BrowserRouter>
-                        <header className="header">
-                            <a href="/" >
-                                <img src="electron-logo.png" alt="LOGO" class="logo"/>
-                            </a>
-
-                            <nav>
-                                <Link to="/" className="link">Home</Link>
-                                <Link to="/test"  className="link">Test</Link>
-                            </nav>
-                        </header>
-
-                        <Route path="/" exact={true} component={Home}/>
-                        <Route path="/test" component={Test}/>
-
+                        <Header/>
 
                         <RaisedButton label="Health check from backend" onClick={this.healthCheckFromBackend.bind(this)} style="color:green"/>
 
