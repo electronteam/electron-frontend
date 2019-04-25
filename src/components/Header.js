@@ -7,14 +7,18 @@ export function Header()
 {
     return (
             <BrowserRouter>
-                <header className="header">
-                    <nav>
-                        <Link to="/" className="logo">
-                            <img src="electron-logo.png" alt="LOGO" className="logo"/>
-                        </Link>
-                        <Link to="/" className="link">Home</Link>
-                        <Link to="/test" className="link">Test</Link>
-                    </nav>
+                <header>
+                    <Link to="/" className="logo">
+                        <img src="electron-logo.png" alt="LOGO" className="logo"/>
+                    </Link>
+                    <ul class="main-nav">
+                        <li>
+                            <Link to="/" className="link">Electronice</Link>
+                        </li>
+                        <li>
+                            <Link to="/test" className="link">Electromontaj</Link>
+                        </li>
+                    </ul>
                 </header>
 
                 <Route path="/" exact={true} component={Home}/>
