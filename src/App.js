@@ -25,7 +25,7 @@ class App extends Component {
                     <BrowserRouter>
                         <Header/>
 
-                        <RaisedButton label="Health check from backend" onClick={this.healthCheckFromBackend.bind(this)} style="color:green"/>
+                        <RaisedButton label="Health check from backend" onClick={this.healthCheckFromBackend.bind(this)}/>
 
                         <p>{this.state.message}</p>
                     </BrowserRouter>
