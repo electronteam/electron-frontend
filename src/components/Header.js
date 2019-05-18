@@ -1,7 +1,6 @@
 import React from 'react';
 import {BrowserRouter, Link, Route} from 'react-router-dom';
-import {Home} from "./Home";
-import {Test} from "./Test";
+import {properties} from '../properties.js';
 
 export function Header()
 {
@@ -12,17 +11,21 @@ export function Header()
                         <img src="electron-logo.png" alt="LOGO" className="logo"/>
                     </Link>
                     <ul class="main-nav">
-                        <li>
-                            <Link to="/" className="link">Electronice</Link>
-                        </li>
-                        <li>
-                            <Link to="/test" className="link">Electromontaj</Link>
-                        </li>
+                        {properties.header.links.map((link) => {
+                            return (
+                                    <li>
+                                        <Link to={link.path} className="link">{link.displayText}</Link>
+                                    </li>
+                            )
+                        })}
                     </ul>
                 </header>
 
-                <Route path="/" exact={true} component={Home}/>
-                <Route path="/test" component={Test}/>
+                {properties.header.links.map((link) => {
+                    return (
+                            <Route path={link.path} exact={true} component={link.component}/>
+                    )
+                })}
             </BrowserRouter>
     );
 }
