@@ -10,20 +10,22 @@ export function Header()
                     <Link to="/" className="logo">
                         <img src="electron-logo.png" alt="LOGO" className="logo"/>
                     </Link>
-                    <ul class="main-nav">
-                        {properties.header.links.map((link) => {
+                    <ul className="main-nav">
+                        {properties.header.links.map((link, index) => {
                             return (
-                                    <li>
-                                        <Link to={link.path} className="link">{link.displayText}</Link>
+                                    <li key={index}>
+                                        <Link to={link.path} className="link">
+                                            {link.displayText}
+                                        </Link>
                                     </li>
                             )
                         })}
                     </ul>
                 </header>
 
-                {properties.header.links.map((link) => {
+                {properties.header.links.map((link, index) => {
                     return (
-                            <Route path={link.path} exact={true} component={link.component}/>
+                            <Route path={link.path} exact={true} component={link.component} key={index}/>
                     )
                 })}
             </BrowserRouter>
