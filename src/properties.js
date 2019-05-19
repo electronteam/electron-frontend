@@ -1,18 +1,36 @@
-import {Home} from "./components/Home";
-import {Test} from "./components/Test";
+import {Principala} from "./components/Principala";
+import {Electronice} from "./components/Electronice";
+import {Electromontaj} from "./components/Electromontaj";
+import {Articole} from "./components/Articole";
+import {Contacte} from "./components/Contacte";
 
 export const properties = {
     header: {
         links: [
             {
+                displayText: "Principala",
+                path: "/principala",
+                component: Principala
+            },
+            {
                 displayText: "Electronice",
-                path: "/",
-                component: Home
+                path: "/electronice",
+                component: Electronice
             },
             {
                 displayText: "Electromontaj",
-                path: "/test",
-                component: Test
+                path: "/electromontaj",
+                component: Electromontaj
+            },
+            {
+                displayText: "Articole",
+                path: "/articole",
+                component: Articole
+            },
+            {
+                displayText: "Contacte",
+                path: "/contacte",
+                component: Contacte
             }
         ]
     }
