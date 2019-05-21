@@ -2,7 +2,7 @@ import React from 'react';
 import {BrowserRouter, Link, Route} from 'react-router-dom';
 import {properties} from '../properties.js';
 
-export function Header()
+export function HeaderMainMenu()
 {
     return (
             <BrowserRouter>

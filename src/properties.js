@@ -9,7 +9,7 @@ export const properties = {
         links: [
             {
                 displayText: "Principala",
-                path: "/principala",
+                path: "/",
                 component: Principala
             },
             {
