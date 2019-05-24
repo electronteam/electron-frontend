@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Constants} from "../constants";
 
 class ProductList extends Component {
 
@@ -12,16 +13,22 @@ class ProductList extends Component {
 
     componentDidMount()
     {
-        fetch('http://localhost:8080/products')
-                .then(response => response.json())
-                .then(response => {
-                    this.setState({
-                        products: response
-                    });
+        fetch('http://localhost:8080/products',
+            {
+                method: 'GET',
+                headers: new Headers({
+                    'X-Auth-Token': localStorage.getItem(Constants.SESSION_TOKEN)
                 })
-                .catch(error => {
-                    console.log(error);
+            })
+            .then(response => response.json())
+            .then(response => {
+                this.setState({
+                    products: response
                 });
+            })
+            .catch(error => {
+                console.log(error);
+            });
     }
 
     render()
