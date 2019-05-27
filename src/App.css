@@ -1,63 +1,81 @@
 * {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
-header {
-  width: 100%;
-  text-align:center;
-  vertical-align: middle;
-}
-
-header .main-nav li {
-  list-style-type: none;
-  display: inline-block;
-}
-
-header .link {
-  padding: 0 12px;
-  text-decoration: none;
-  text-transform: uppercase;
-  cursor: pointer;
-  color: #222222;
-  font-family: 'built_titling', Helvetica, sans-serif;
-  font-weight: 400;
-  font-size: 18px;
-  letter-spacing: 1px;
-}
-
-header .logo {
-  width: 80px;
-  margin: 10px 0;
-}
-
-a:hover, a:focus {
-  color: #D10024;
-  text-decoration: none;
-  outline: none;
+a:hover, a:focus, a:active {
+    color: #2fce98;
+    text-decoration: none;
+    outline: none;
 }
 
 a {
-  color: #2B2D42;
-  font-weight: 500;
-  -webkit-transition: 0.2s color;
-  transition: 0.2s color;
+    color: #2B2D42;
+    font-weight: 500;
+    -webkit-transition: 0.2s color;
+    transition: 0.2s color;
+}
+
+header {
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+}
+
+header .main-nav li {
+    list-style-type: none;
+    display: inline-block;
+}
+
+header .main-nav li a:hover {
+    color: #2fce98;
+}
+
+header .main-nav li a:active {
+    color: #2fce98;
+}
+
+header .link {
+    padding: 0 12px;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+header .logo {
+    width: 80px;
+    margin: 10px 0;
+}
+
+.site-navbar .site-navbar-top {
+    border-bottom: 1px solid #f3f3f4;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 0px;
+}
+
+.site-navbar .site-navigation.border-bottom {
+    border-bottom: 1px solid #f3f3f4 !important;
+}
+
+.site-navigation {
+    margin-top: 20px;
 }
 
 .product .product-body .product-price {
-  color: #D10024;
-  font-size: 18px;
+    color: #2fce98;
+    font-size: 18px;
 }
 
 .product .product-body .product-name {
-  text-transform: uppercase;
-  font-size: 14px;
+    text-transform: uppercase;
+    font-size: 14px;
 }
 
-.product .product-body .product-name>a {
-  font-weight: 700;
-}
-
-.product .product-body .product-name>a:hover, .product .product-body .product-name>a:focus {
-  color: #D10024;
+.product .product-body .product-name > a {
+    font-weight: 700;
 }
