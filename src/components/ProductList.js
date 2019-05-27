@@ -41,17 +41,23 @@ class ProductList extends Component {
 
                                 {this.state.products.map((product, index) => {
                                     return (
-                                            <div className="col-sm-6 col-lg-4 mb-4" data-aos="fade-up" key={index}>
+                                            <div className="col-sm-6 col-lg-3 mb-3" data-aos="fade-up" key={index}>
                                                 <div className="block-4 text-center border">
-                                                    <figure className="block-4-image">
-                                                        <a href="shop-single.html">
-                                                            <img src={"img/product_" + product.code + ".png"} alt="Image placeholder" className="img-fluid"/>
-                                                        </a>
-                                                    </figure>
-                                                    <div className="block-4-text p-4">
-                                                        <h3><a href="shop-single.html">{product.name}</a></h3>
-                                                        <p className="mb-0">{product.description}</p>
-                                                        <p className="text-primary font-weight-bold">$50</p>
+                                                    <div className="product">
+                                                        <div className="product-img">
+                                                            <figure className="block-4-image">
+                                                                <a href="shop-single.html">
+                                                                    <img src={"img/product_" + product.code + ".png"} alt="Image placeholder"
+                                                                         className="img-fluid"/>
+                                                                </a>
+                                                            </figure>
+                                                        </div>
+                                                        <div className="product-body">
+                                                            <div className="block-4-text p-4">
+                                                                <h3 className="product-name"><a href="#">{product.name}</a></h3>
+                                                                <h4 className="product-price">$50</h4>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
