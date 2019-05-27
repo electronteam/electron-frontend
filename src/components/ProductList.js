@@ -14,43 +14,42 @@ class ProductList extends Component {
     componentDidMount()
     {
         fetch('http://localhost:8080/products',
-            {
-                method: 'GET',
-                headers: new Headers({
-                    'X-Auth-Token': localStorage.getItem(Constants.SESSION_TOKEN)
+                {
+                    method: 'GET',
+                    headers: new Headers({
+                        'X-Auth-Token': localStorage.getItem(Constants.SESSION_TOKEN)
+                    })
                 })
-            })
-            .then(response => response.json())
-            .then(response => {
-                this.setState({
-                    products: response
+                .then(response => response.json())
+                .then(response => {
+                    this.setState({
+                        products: response
+                    });
+                })
+                .catch(error => {
+                    console.log(error);
                 });
-            })
-            .catch(error => {
-                console.log(error);
-            });
     }
 
     render()
     {
         return (
-                <div>
-                    <h3>Product List</h3>
-                    <br/>
+                <div className="row mb-5">
 
                     {this.state.products.map((product, index) => {
                         return (
-                                <ul key={index}>
-                                    <li>
-                                        {product.code}
-                                    </li>
-                                    <li>
-                                        {product.name}
-                                    </li>
-                                    <li>
-                                        {product.description}
-                                    </li>
-                                </ul>
+                                <div className="col-sm-6 col-lg-4 mb-4" data-aos="fade-up" key={index}>
+                                    <div className="block-4 text-center border">
+                                        <figure className="block-4-image">
+                                            <a href="shop-single.html"><img src="http://placehold.it/700x400" alt="Image placeholder" className="img-fluid"/></a>
+                                        </figure>
+                                        <div className="block-4-text p-4">
+                                            <h3><a href="shop-single.html">{product.name}</a></h3>
+                                            <p className="mb-0">{product.description}</p>
+                                            <p className="text-primary font-weight-bold">$50</p>
+                                        </div>
+                                    </div>
+                                </div>
                         )
                     })}
                 </div>
