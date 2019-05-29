@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import {Constants} from "../constants";
 
 class ProductList extends Component {
 
@@ -13,13 +12,7 @@ class ProductList extends Component {
 
     componentDidMount()
     {
-        fetch('http://localhost:8080/products',
-                {
-                    method: 'GET',
-                    headers: new Headers({
-                        'X-Auth-Token': localStorage.getItem(Constants.SESSION_TOKEN)
-                    })
-                })
+        fetch('/api/products')
                 .then(response => response.json())
                 .then(response => {
                     this.setState({

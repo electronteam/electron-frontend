@@ -1,7 +1,13 @@
 import React from 'react';
+import ProductList from "./ProductList";
 
-export function Electronice() {
+export function Electronice()
+{
     return (
-            <h1>Pagina produselor electronice</h1>
+            <div>
+                <h1>Pagina produselor electronice</h1>
+                <br/>
+                <ProductList/>
+            </div>
     );
 }
