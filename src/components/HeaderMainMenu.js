@@ -7,10 +7,22 @@ export function HeaderMainMenu()
     return (
             <BrowserRouter>
                 <header className="site-navbar">
-                    <div className="site-navbar-top">
-                        <Link to="/" className="logo">
-                            <img src="electron-logo.png" alt="LOGO" className="logo"/>
-                        </Link>
+                    <div className="row site-navbar-top d-flex flex-wrap align-items-center">
+                        <div className="col">
+                        </div>
+                        <div className="col">
+                            <Link to="/" className="logo">
+                                <img src="electron-logo.png" alt="LOGO" className="logo"/>
+                            </Link>
+                        </div>
+                        <div className="col">
+                            <Link to="/cart">
+                                <img src="cart.png"/>
+                                <div className="cart_count">
+                                    <span>10</span>
+                                </div>
+                            </Link>
+                        </div>
                     </div>
                     <nav className="site-navigation text-right text-md-center" role="navigation">
                         <ul className="main-nav">
