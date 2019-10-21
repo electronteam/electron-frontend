@@ -5,6 +5,11 @@ import {Articole} from "./components/Articole";
 import {Contacte} from "./components/Contacte";
 
 export const properties = {
+    contacts: {
+        phone: "(+373) 69 479 862",
+        email: "electron@gmail.com",
+        mailto: "mailto:electron@gmail.com"
+    },
     header: {
         links: [
             {

@@ -1,10 +1,16 @@
+:root{
+    --site-specific-color: rgb(47, 83, 122);
+    --price-color: #DD3721;
+    --header-menu-color: #a19a9a;
+}
+
 * {
     margin: 0;
     padding: 0;
 }
 
 a:hover, a:focus, a:active {
-    color: #2fce98;
+    color: #DD3721;
     text-decoration: none;
     outline: none;
 }
@@ -28,11 +34,11 @@ header .main-nav li {
 }
 
 header .main-nav li a:hover {
-    color: #2fce98;
+    color: #DD3721;
 }
 
 header .main-nav li a:active {
-    color: #2fce98;
+    color: #DD3721;
 }
 
 header .link {
@@ -44,6 +50,7 @@ header .link {
     font-weight: 400;
     font-size: 16px;
     letter-spacing: 1px;
+    color: var(--header-menu-color);
 }
 
 header .logo {
@@ -67,7 +74,7 @@ header .logo {
 }
 
 .product .product-body .product-price {
-    color: #2fce98;
+    color: var(--price-color);
     font-size: 18px;
 }
 
@@ -92,7 +99,7 @@ img
     right: 257px;
     width: 23px;
     height: 23px;
-    background: #0e8ce4;
+    background: var(--site-specific-color);
     border-radius: 50%;
     text-align: center;
 }
@@ -108,4 +115,62 @@ img
     -ms-transform: translateY(1px);
     -o-transform: translateY(1px);
     transform: translateY(1px);
+}
+
+.top_bar
+{
+    width: 100%;
+    height: 56px;
+    background: #fafafa;
+    border-bottom: solid 1px rgba(0,0,0,0.05);
+    z-index: 2;
+}
+
+.top_bar_contact
+{
+    display: inline-block;
+}
+
+.top_bar_contact_item
+{
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 56px;
+    margin-right: 40px;
+}
+
+.top_bar_contact_item:not(:first-child)
+{
+    margin-right: 0px;
+}
+.top_bar_contact_item a
+{
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 56px;
+    color: #000;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+.top_bar_contact_item a:hover
+{
+    color: #8a8a8a;
+}
+.top_bar_contact_item:last-child
+{
+    margin-right: 0px;
+}
+
+.top_bar_icon
+{
+    display: inline-block;
+    margin-right: 14px;
+    -webkit-transform: translateY(-2px);
+    -moz-transform: translateY(-2px);
+    -ms-transform: translateY(-2px);
+    -o-transform: translateY(-2px);
+    transform: translateY(-2px);
 }
