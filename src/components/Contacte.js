@@ -2,6 +2,8 @@ import React from 'react';
 
 export function Contacte() {
     return (
-            <h1>Pagina de Contacte</h1>
+            <div className="container text-center">
+                <h1>Pagina de Contacte</h1>
+            </div>
     );
 }

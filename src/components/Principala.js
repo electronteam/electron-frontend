@@ -4,7 +4,7 @@ import ProductList from "./ProductList";
 export function Principala()
 {
     return (
-            <div>
+            <div className="container text-center">
                 <h1>Pagina principala</h1>
                 <br/>
                 <ProductList/>

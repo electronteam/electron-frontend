@@ -2,6 +2,8 @@ import React from 'react';
 
 export function Articole() {
     return (
-            <h1>Pagina cu articole</h1>
+            <div className="container text-center">
+                <h1>Pagina cu articole</h1>
+            </div>
     );
 }

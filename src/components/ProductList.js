@@ -30,7 +30,7 @@ class ProductList extends Component {
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-12">
-                            <div className="row mb-5">
+                            <div className="row mb-1">
 
                                 {this.state.products.map((product, index) => {
                                     return (
