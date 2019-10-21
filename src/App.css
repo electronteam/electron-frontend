@@ -9,6 +9,13 @@
     padding: 0;
 }
 
+.container
+{
+    margin: 0 auto;
+    width: 1200px;
+    max-width: 1200px;
+}
+
 a:hover, a:focus, a:active {
     color: #DD3721;
     text-decoration: none;
@@ -101,11 +108,16 @@ img
     max-width: 100%;
 }
 
+.basket-icon
+{
+    margin-right: 15px;
+}
+
 .cart_count
 {
     position: absolute;
     bottom: -1px;
-    right: 0px;
+    right: 15px;
     width: 23px;
     height: 23px;
     background: var(--site-specific-color);

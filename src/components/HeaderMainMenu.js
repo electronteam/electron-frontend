@@ -28,12 +28,14 @@ export function HeaderMainMenu()
                                     </div>
                                 </div>
                                 <div className="col-sm-3 text-right">
-                                    <Link to="/cart">
-                                        <img src="cart.png"/>
-                                        <div className="cart_count">
-                                            <span>10</span>
-                                        </div>
-                                    </Link>
+                                    <div className="basket-icon">
+                                        <Link to="/cart">
+                                            <img src="cart.png"/>
+                                            <div className="cart_count">
+                                                <span>10</span>
+                                            </div>
+                                        </Link>
+                                    </div>
                                 </div>
                             </div>
                         </div>
