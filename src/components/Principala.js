@@ -1,12 +1,14 @@
 import React from 'react';
+import SuggestiveBar from "./SuggestiveBar";
 import ProductList from "./ProductList";
 
 export function Principala()
 {
+    const suggestiveText = 'Cele mai vindute produse';
+
     return (
-            <div className="container text-center">
-                <h1>Pagina principala</h1>
-                <br/>
+            <div className="container">
+                <SuggestiveBar suggestiveText={suggestiveText}/>
                 <ProductList/>
             </div>
     );

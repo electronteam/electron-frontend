@@ -1,9 +1,15 @@
 import React from 'react';
+import SuggestiveBar from "./SuggestiveBar";
+import ProductList from "./ProductList";
 
-export function Electromontaj() {
+export function Electromontaj()
+{
+    const suggestiveText = 'Pagina produselor de electromontaj';
+
     return (
             <div className="container text-center">
-                <h1>Pagina produselor de electromontaj</h1>
+                <SuggestiveBar suggestiveText={suggestiveText}/>
+                <ProductList/>
             </div>
     );
 }

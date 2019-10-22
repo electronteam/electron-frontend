@@ -1,12 +1,14 @@
 import React from 'react';
 import ProductList from "./ProductList";
+import SuggestiveBar from "./SuggestiveBar";
 
 export function Electronice()
 {
+    const suggestiveText = 'Pagina produselor electronice';
+
     return (
             <div className="container text-center">
-                <h1>Pagina produselor electronice</h1>
-                <br/>
+                <SuggestiveBar suggestiveText={suggestiveText}/>
                 <ProductList/>
             </div>
     );

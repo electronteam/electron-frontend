@@ -34,7 +34,7 @@ class ProductList extends Component {
                         {this.state.products.map((product, index) => {
                             return (
                                     <div className="col-sm-6 col-lg-3 mb-3" data-aos="fade-up" key={index}>
-                                        <div className="block-4 text-center border">
+                                        <div className="block-4 text-center">
                                             <div className="product">
                                                 <div className="product-img">
                                                     <figure className="block-4-image">

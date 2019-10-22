@@ -138,6 +138,26 @@ img
     transform: translateY(1px);
 }
 
+.suggestive_bar
+{
+    width: 100%;
+    background: #fafafa;
+    height: 50px;
+    font-size: 17px;
+    padding-left: 10px;
+    margin-bottom: 10px;
+    text-align: left;
+    vertical-align: middle;
+    line-height: 50px;
+}
+
+.suggestive_bar span
+{
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+}
+
 .top_bar
 {
     width: 100%;
