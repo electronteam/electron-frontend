@@ -1,6 +1,7 @@
 import React from 'react';
 import {BrowserRouter, Link, Route} from 'react-router-dom';
 import {properties} from '../properties.js';
+import {Category} from "./Category";
 
 export function HeaderMainMenu()
 {
@@ -20,7 +21,7 @@ export function HeaderMainMenu()
                                 <div className="col-sm-6 text-center">
                                     <div className="header_search_form_container">
                                         <form action="#" className="header_search_form clearfix">
-                                            <input type="search" required="required" className="header_search_input" placeholder="Search for products..." />
+                                            <input type="search" required="required" className="header_search_input" placeholder="Search for products..."/>
                                             <button type="submit" className="header_search_button trans_300" value="Submit">
                                                 <img src="search.png" alt=""/>
                                             </button>
@@ -58,9 +59,19 @@ export function HeaderMainMenu()
                 </header>
 
                 {properties.header.links.map((link, index) => {
-                    return (
-                            <Route path={link.path} exact={true} component={link.component} key={index}/>
-                    )
+                    if (link.isCategoryLink)
+                    {
+                        return <Route path={link.path}
+                                      exact={true}
+                                      render={(props) => <Category {...props}
+                                                                   categoryName={link.name}
+                                                                   suggestiveText={link.suggestiveText}/>}
+                                      key={index}/>
+                    }
+                    else
+                    {
+                        return <Route path={link.path} exact={true} component={link.component} key={index}/>
+                    }
                 })}
             </BrowserRouter>
     );

@@ -2,14 +2,14 @@ import React from 'react';
 import ProductList from "./ProductList";
 import SuggestiveBar from "./SuggestiveBar";
 
-export function Electronice()
+export function Category(props)
 {
-    const suggestiveText = 'Pagina produselor electronice';
-
     return (
             <div className="container text-center">
-                <SuggestiveBar suggestiveText={suggestiveText}/>
+                <SuggestiveBar suggestiveText={props.suggestiveText}/>
                 <ProductList/>
             </div>
     );
 }
+
+export default Category;

@@ -1,8 +1,7 @@
 import {Principala} from "./components/Principala";
-import {Electronice} from "./components/Electronice";
-import {Electromontaj} from "./components/Electromontaj";
 import {Articole} from "./components/Articole";
 import {Contacte} from "./components/Contacte";
+import {Category} from "./components/Category";
 
 export const properties = {
     contacts: {
@@ -20,12 +19,18 @@ export const properties = {
             {
                 displayText: "Electronice",
                 path: "/electronice",
-                component: Electronice
+                name: "electronice",
+                suggestiveText: "Pagina produselor electronice",
+                isCategoryLink: true,
+                component: Category
             },
             {
                 displayText: "Electromontaj",
                 path: "/electromontaj",
-                component: Electromontaj
+                name: "electromontaj",
+                suggestiveText: "Pagina produselor de electromontaj",
+                isCategoryLink: true,
+                component: Category
             },
             {
                 displayText: "Articole",
