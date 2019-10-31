@@ -2,6 +2,7 @@ import React from 'react';
 import {BrowserRouter, Link, Route} from 'react-router-dom';
 import {properties} from '../properties.js';
 import {Category} from "./Category";
+import {SearchResults} from "./SearchResults";
 
 export function HeaderMainMenu()
 {
@@ -20,8 +21,9 @@ export function HeaderMainMenu()
                                 </div>
                                 <div className="col-sm-6 text-center">
                                     <div className="header_search_form_container">
-                                        <form action="#" className="header_search_form clearfix">
-                                            <input type="search" required="required" className="header_search_input" placeholder="Search for products..."/>
+                                        <form action={properties.search.path} className="header_search_form clearfix">
+                                            <input type="search" name={properties.search.term} required="required" className="header_search_input"
+                                                   placeholder="Search for products..."/>
                                             <button type="submit" className="header_search_button trans_300" value="Submit">
                                                 <img src="search.png" alt=""/>
                                             </button>
@@ -73,6 +75,10 @@ export function HeaderMainMenu()
                         return <Route path={link.path} exact={true} component={link.component} key={index}/>
                     }
                 })}
+
+                <Route path={properties.search.path}
+                       exact={true}
+                       render={(props) => <SearchResults {...props} suggestiveText={properties.search.suggestiveText}/>}/>
             </BrowserRouter>
     );
 }

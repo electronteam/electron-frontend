@@ -2,6 +2,7 @@ import {Principala} from "./components/Principala";
 import {Articole} from "./components/Articole";
 import {Contacte} from "./components/Contacte";
 import {Category} from "./components/Category";
+import {SearchResults} from "./components/SearchResults";
 
 export const properties = {
     contacts: {
@@ -43,5 +44,15 @@ export const properties = {
                 component: Contacte
             }
         ]
+    },
+    search: {
+        path: "/search",
+        suggestiveText: "Rezultatele cautarii",
+        term: "term",
+        component: SearchResults
+    },
+    api: {
+        allProducts: "/api/solr/products",
+        searchProducts: "/api/solr/searchProducts"
     }
 };
