@@ -45,6 +45,10 @@ export const properties = {
             }
         ]
     },
+    product: {
+        path: "/produs/",
+        paramName: "productCode"
+    },
     search: {
         path: "/search",
         suggestiveText: "Rezultatele cautarii",
@@ -53,6 +57,7 @@ export const properties = {
     },
     api: {
         allProducts: "/api/solr/products",
-        searchProducts: "/api/solr/searchProducts"
+        searchProducts: "/api/solr/searchProducts",
+        productByCode: "/api/product"
     }
 };

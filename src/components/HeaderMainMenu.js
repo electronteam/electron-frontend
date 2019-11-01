@@ -3,6 +3,7 @@ import {BrowserRouter, Link, Route} from 'react-router-dom';
 import {properties} from '../properties.js';
 import {Category} from "./Category";
 import {SearchResults} from "./SearchResults";
+import ProductView from "./ProductView";
 
 export function HeaderMainMenu()
 {
@@ -79,6 +80,7 @@ export function HeaderMainMenu()
                 <Route path={properties.search.path}
                        exact={true}
                        render={(props) => <SearchResults {...props} suggestiveText={properties.search.suggestiveText}/>}/>
+                <Route path={properties.product.path + ":" + properties.product.paramName} component={ProductView}/>
             </BrowserRouter>
     );
 }
