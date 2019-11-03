@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {properties} from "../properties";
+import SuggestiveBar from "./SuggestiveBar";
 
 class ProductView extends Component {
 
@@ -32,13 +33,29 @@ class ProductView extends Component {
     {
         return (
                 <div className="container text-center">
-                    <h1>Pagina de vizualizare detaliilor produsului</h1>
-                    Codul produsului - {this.state.product.code}
-                    <br/>
-                    Numele produsului - {this.state.product.name}
-                    <br/>
-                    Descrierea produsului - {this.state.product.description}
-                    <br/>
+                    <div className="single_product">
+                        <div className="container">
+                            <div className="row">
+                                <div className="col-lg-5">
+                                    <div className="image_selected">
+                                        <img src={"/img/product_" + this.state.product.code + ".png"} alt="Image placeholder" className="img-fluid"/>
+                                    </div>
+                                </div>
+
+                                <div className="col-lg-7">
+                                    <div className="product_description">
+                                        <div className="product_name">{this.state.product.name}</div>
+                                        <div className="product_text"><p>{this.state.product.description}</p></div>
+
+                                        <div className="product_price">$2000</div>
+                                        <div className="button_container">
+                                            <button type="button" className="button cart_button">Add to Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
         );
     }

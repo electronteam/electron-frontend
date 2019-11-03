@@ -9,11 +9,11 @@ export function TopBar()
                 <div className="row">
                     <div className="col d-flex flex-row">
                         <div className="top_bar_contact_item">
-                            <div className="top_bar_icon"><img src="phone.png" alt=""/></div>{properties.contacts.phone}
+                            <div className="top_bar_icon"><img src="/phone.png" alt=""/></div>{properties.contacts.phone}
                         </div>
                         <div className="top_bar_contact_item">
                             <div className="top_bar_icon">
-                                <img src="mail.png" alt=""/>
+                                <img src="/mail.png" alt=""/>
                             </div>
                             <a href={properties.contacts.mailto}>{properties.contacts.email}</a>
                         </div>

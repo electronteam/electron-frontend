@@ -16,7 +16,7 @@ export function HeaderMainMenu()
                             <div className="row d-flex flex-wrap align-items-center">
                                 <div className="col-sm-3 text-left">
                                     <Link to="/" className="logo">
-                                        <img src="electron-logo.png" alt="LOGO" className="logo"/>
+                                        <img src="/electron-logo.png" alt="LOGO" className="logo"/>
                                         <span>ELECTRON</span>
                                     </Link>
                                 </div>
@@ -26,7 +26,7 @@ export function HeaderMainMenu()
                                             <input type="search" name={properties.search.term} required="required" className="header_search_input"
                                                    placeholder="Search for products..."/>
                                             <button type="submit" className="header_search_button trans_300" value="Submit">
-                                                <img src="search.png" alt=""/>
+                                                <img src="/search.png" alt=""/>
                                             </button>
                                         </form>
                                     </div>
@@ -34,7 +34,7 @@ export function HeaderMainMenu()
                                 <div className="col-sm-3 text-right">
                                     <div className="basket-icon">
                                         <Link to="/cart">
-                                            <img src="cart.png"/>
+                                            <img src="/cart.png"/>
                                             <div className="cart_count">
                                                 <span>10</span>
                                             </div>
