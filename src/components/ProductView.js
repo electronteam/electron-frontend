@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import {properties} from "../properties";
-import SuggestiveBar from "./SuggestiveBar";
 
 class ProductView extends Component {
 
@@ -29,6 +28,20 @@ class ProductView extends Component {
                 });
     }
 
+    addProductToCart(code)
+    {
+        let api = properties.api.addProductToCart;
+        let formData = new FormData();
+        formData.append('code', code);
+
+        fetch(api, {
+            method: 'post',
+            body: formData
+        }).then(function (response) {
+            //TODO - display a popup with new cart details or with an informing message that tells that a new item has been added to cart
+        })
+    }
+
     render()
     {
         return (
@@ -50,7 +63,9 @@ class ProductView extends Component {
 
                                         <div className="product_price">{this.state.product.price} lei</div>
                                         <div className="button_container">
-                                            <button type="button" className="button cart_button">Add to Cart</button>
+                                            <button type="button" className="button cart_button" onClick={() => this.addProductToCart(this.state.product.code)}>
+                                                Add to Cart
+                                            </button>
                                         </div>
                                     </div>
                                 </div>

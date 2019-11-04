@@ -58,6 +58,7 @@ export const properties = {
     api: {
         allProducts: "/api/solr/products",
         searchProducts: "/api/solr/searchProducts",
-        productByCode: "/api/product"
+        productByCode: "/api/product",
+        addProductToCart: "/api/addtocart"
     }
 };
