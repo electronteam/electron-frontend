@@ -36,13 +36,14 @@ class ProductView extends Component {
                     <div className="single_product">
                         <div className="container">
                             <div className="row">
+                                <div className="col-lg-1"></div>
                                 <div className="col-lg-5">
                                     <div className="image_selected">
                                         <img src={"/img/product_" + this.state.product.code + ".png"} alt="Image placeholder" className="img-fluid"/>
                                     </div>
                                 </div>
 
-                                <div className="col-lg-7">
+                                <div className="col-lg-5">
                                     <div className="product_description">
                                         <div className="product_name">{this.state.product.name}</div>
                                         <div className="product_text"><p>{this.state.product.description}</p></div>
@@ -53,6 +54,7 @@ class ProductView extends Component {
                                         </div>
                                     </div>
                                 </div>
+                                <div className="col-lg-1"></div>
                             </div>
                         </div>
                     </div>
