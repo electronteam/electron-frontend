@@ -47,7 +47,7 @@ class ProductView extends Component {
                                         <div className="product_name">{this.state.product.name}</div>
                                         <div className="product_text"><p>{this.state.product.description}</p></div>
 
-                                        <div className="product_price">$2000</div>
+                                        <div className="product_price">{this.state.product.price} lei</div>
                                         <div className="button_container">
                                             <button type="button" className="button cart_button">Add to Cart</button>
                                         </div>

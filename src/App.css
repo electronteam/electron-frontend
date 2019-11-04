@@ -380,6 +380,7 @@ img
     font-weight: 500;
     margin-top: 35px;
     clear: left;
+    color: var(--price-color);
 }
 
 .image_selected

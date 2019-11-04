@@ -56,7 +56,7 @@ class ProductList extends Component {
                                                     <div className="product-body">
                                                         <div className="block-4-text p-4">
                                                             <h3 className="product-name"><a href="#">{product.name}</a></h3>
-                                                            <h4 className="product-price">$50</h4>
+                                                            <h4 className="product-price">{product.price} lei</h4>
                                                         </div>
                                                     </div>
                                                 </div>
