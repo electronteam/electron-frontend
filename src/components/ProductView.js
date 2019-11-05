@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {properties} from "../properties";
 import '../styles/product.css';
+import ProductAddedPopup from "./ProductAddedPopup";
 
 class ProductView extends Component {
 
@@ -8,8 +9,10 @@ class ProductView extends Component {
     {
         super();
         this.state = {
-            product: {}
+            product: {},
+            showPopup: false
         };
+        this.togglePopup = this.togglePopup.bind(this);
     }
 
     componentDidMount()
@@ -29,7 +32,16 @@ class ProductView extends Component {
                 });
     }
 
-    addProductToCart(code)
+    togglePopup()
+    {
+        this.setState({
+            showPopup: !this.state.showPopup
+        });
+    }
+
+    // outer function scope                                        -
+   // inside outer function"this" keyword refers to window(??? or ProductView object) object
+    addProductToCart(code, callback)
     {
         let api = properties.api.addProductToCart;
         let formData = new FormData();
@@ -39,7 +51,7 @@ class ProductView extends Component {
             method: 'post',
             body: formData
         }).then(function (response) {
-            //TODO - display a popup with new cart details or with an informing message that tells that a new item has been added to cart
+            callback();// "this" inside callback also refers window object
         })
     }
 
@@ -56,7 +68,6 @@ class ProductView extends Component {
                                         <img src={"/img/product_" + this.state.product.code + ".png"} alt="Image placeholder" className="img-fluid"/>
                                     </div>
                                 </div>
-
                                 <div className="col-lg-5">
                                     <div className="product_description">
                                         <div className="product_name">{this.state.product.name}</div>
@@ -64,7 +75,7 @@ class ProductView extends Component {
 
                                         <div className="product_price">{this.state.product.price} lei</div>
                                         <div className="button_container">
-                                            <button type="button" className="button cart_button" onClick={() => this.addProductToCart(this.state.product.code)}>
+                                            <button type="button" className="button cart_button" onClick={() => this.addProductToCart(this.state.product.code, this.togglePopup)}>
                                                 Add to Cart
                                             </button>
                                         </div>
@@ -74,6 +85,7 @@ class ProductView extends Component {
                             </div>
                         </div>
                     </div>
+                    {this.state.showPopup ? <ProductAddedPopup text='A new item has been added to your Shopping Cart.' closePopup={this.togglePopup.bind(this)}/> : null}
                 </div>
         );
     }
