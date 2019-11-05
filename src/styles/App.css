@@ -340,49 +340,6 @@ img
     border-bottom-right-radius: 5px;
 }
 
-.single_product
-{
-    padding-top: 10px;
-    padding-bottom: 75px;
-}
-
-.product_name
-{
-    font-size: 30px;
-    font-weight: 500;
-    margin-top: 11px;
-}
-
-.product_description
-{
-    padding-left: 50px;
-    text-align: left;
-}
-
-.product_text
-{
-    margin-top: 25px;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    font-size: 12px;
-    letter-spacing: 1px;
-    color: var(--header-menu-color);
-}
-.product_text p:last-child
-{
-    margin-bottom: 0px;
-}
-
-.product_price
-{
-    display: inline-block;
-    font-size: 24px;
-    font-weight: 500;
-    margin-top: 35px;
-    clear: left;
-    color: var(--price-color);
-}
-
 .image_selected
 {
     display: -webkit-box;
@@ -410,10 +367,6 @@ img
     max-width: 100%;
 }
 
-.button_container
-{
-    margin-top: 43px;
-}
 .cart_button
 {
     display: inline-block;

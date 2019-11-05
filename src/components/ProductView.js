@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {properties} from "../properties";
+import '../styles/product.css';
 
 class ProductView extends Component {
 

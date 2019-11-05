@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './styles/App.css';
 
 import {TopBar} from "./components/TopBar";
 import {HeaderMainMenu} from "./components/HeaderMainMenu";
