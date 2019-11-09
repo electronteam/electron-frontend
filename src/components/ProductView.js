@@ -76,7 +76,7 @@ class ProductView extends Component {
                                         <div className="product_price">{this.state.product.price} lei</div>
                                         <div className="button_container">
                                             <button type="button" className="button cart_button" onClick={() => this.addProductToCart(this.state.product.code, this.togglePopup)}>
-                                                Add to Cart
+                                                {properties.buttons.addToCart}
                                             </button>
                                         </div>
                                     </div>
@@ -85,7 +85,7 @@ class ProductView extends Component {
                             </div>
                         </div>
                     </div>
-                    {this.state.showPopup ? <ProductAddedPopup text='A new item has been added to your Shopping Cart.' closePopup={this.togglePopup.bind(this)}/> : null}
+                    {this.state.showPopup ? <ProductAddedPopup closePopup={this.togglePopup.bind(this)}/> : null}
                 </div>
         );
     }

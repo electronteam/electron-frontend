@@ -60,5 +60,13 @@ export const properties = {
         searchProducts: "/api/solr/searchProducts",
         productByCode: "/api/product",
         addProductToCart: "/api/addtocart"
+    },
+    popup: {
+        displayText: "Produsul a fost adăugat în coșul de cumpărături."
+    },
+    buttons: {
+        addToCart: "Adaugă în coș",
+        goToCart: "Vezi coșul",
+        continueShopping: "Continuă cumpărăturile",
     }
 };
