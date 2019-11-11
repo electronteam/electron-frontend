@@ -10,9 +10,11 @@ function App()
 {
     return (
             <MuiThemeProvider>
+                <div>
                 <TopBar/>
                 <HeaderMainMenu/>
                 <Footer/>
+                </div>
             </MuiThemeProvider>
     );
 }

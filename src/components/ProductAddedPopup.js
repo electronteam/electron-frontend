@@ -14,7 +14,7 @@ class ProductAddedPopup extends Component {
                         <div className="popup-text">
                             <img src="/img/tick-icon.png" alt="" className="tick-icon"/>
                             <div className="popup_center">
-                                <p><h4>{properties.popup.displayText}</h4></p>
+                                <h4><p>{properties.popup.displayText}</p></h4>
                                 <div className="actions">
                                     <Link to={properties.cart.path}>
                                         <button type="button" className="button cart_button">

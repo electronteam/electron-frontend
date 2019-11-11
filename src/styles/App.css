@@ -127,7 +127,7 @@ header .logo span
     font-size: 14px;
 }
 
-.product .product-body .product-name > a {
+.product .product-body .product-name {
     font-weight: 700;
 }
 

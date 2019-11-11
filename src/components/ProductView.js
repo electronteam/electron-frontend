@@ -67,7 +67,7 @@ class ProductView extends Component {
                                 <div className="col-lg-1"></div>
                                 <div className="col-lg-5">
                                     <div className="image_selected">
-                                        {this.state.product.code ? <img src={"/img/product_" + this.state.product.code + ".png"} alt="Image placeholder" className="img-fluid"/> : null}
+                                        {this.state.product.code ? <img src={"/img/product_" + this.state.product.code + ".png"} alt="" className="img-fluid"/> : null}
                                     </div>
                                 </div>
                                 <div className="col-lg-5">

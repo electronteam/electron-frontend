@@ -47,14 +47,16 @@ class ProductList extends Component {
                                                 <div className="product">
                                                     <div className="product-img">
                                                         <figure className="block-4-image">
-                                                            <Link to={{ pathname: properties.product.path + product.code}}>
-                                                                <img src={"/img/product_" + product.code + ".png"} alt="Image placeholder"/>
+                                                            <Link to={{pathname: properties.product.path + product.code}}>
+                                                                <img src={"/img/product_" + product.code + ".png"} alt=""/>
                                                             </Link>
                                                         </figure>
                                                     </div>
                                                     <div className="product-body">
                                                         <div className="block-4-text p-4">
-                                                            <h3 className="product-name"><a href="#">{product.name}</a></h3>
+                                                            <Link to={{pathname: properties.product.path + product.code}}>
+                                                                <h1 className="product-name">{product.name}</h1>
+                                                            </Link>
                                                             <h4 className="product-price">{product.price} lei</h4>
                                                         </div>
                                                     </div>

@@ -35,7 +35,7 @@ export function HeaderMainMenu()
                                 <div className="col-sm-3 text-right">
                                     <div className="basket-icon">
                                         <Link to="/cart">
-                                            <img src="/cart.png"/>
+                                            <img src="/cart.png" alt=""/>
                                             <div className="cart_count">
                                                 <span>10</span>
                                             </div>

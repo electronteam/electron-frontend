@@ -31,7 +31,6 @@ class Cart extends Component {
     render()
     {
         return (
-
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-1"></div>
@@ -39,9 +38,9 @@ class Cart extends Component {
                             <div className="cart_title">{properties.cart.title}</div>
                             <div className="cart_items">
                                 {this.state.cart ?
-                                        this.state.cart.entries.map((entry) => {
+                                        this.state.cart.entries.map((entry, index) => {
                                             return (
-                                                    <ul className="cart_list">
+                                                    <ul className="cart_list" key={index}>
                                                         <li className="cart_item clearfix">
                                                             <div className="cart_item_image">
                                                                 <Link to={{pathname: properties.product.path + entry.product.code}}>
