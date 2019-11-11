@@ -4,6 +4,7 @@ import {properties} from '../properties.js';
 import {Category} from "./Category";
 import {SearchResults} from "./SearchResults";
 import ProductView from "./ProductView";
+import Cart from "./Cart";
 
 export function HeaderMainMenu()
 {
@@ -81,6 +82,7 @@ export function HeaderMainMenu()
                        exact={true}
                        render={(props) => <SearchResults {...props} suggestiveText={properties.search.suggestiveText}/>}/>
                 <Route path={properties.product.path + ":" + properties.product.paramName} component={ProductView}/>
+                <Route path={properties.cart.path} exact={true} component={Cart}/>
             </BrowserRouter>
     );
 }

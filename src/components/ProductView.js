@@ -9,7 +9,9 @@ class ProductView extends Component {
     {
         super();
         this.state = {
-            product: {},
+            product: {
+                code: null
+            },
             showPopup: false
         };
         this.togglePopup = this.togglePopup.bind(this);
@@ -40,7 +42,7 @@ class ProductView extends Component {
     }
 
     // outer function scope                                        -
-   // inside outer function"this" keyword refers to window(??? or ProductView object) object
+    // inside outer function"this" keyword refers to window(??? or ProductView object) object
     addProductToCart(code, callback)
     {
         let api = properties.api.addProductToCart;
@@ -65,7 +67,7 @@ class ProductView extends Component {
                                 <div className="col-lg-1"></div>
                                 <div className="col-lg-5">
                                     <div className="image_selected">
-                                        <img src={"/img/product_" + this.state.product.code + ".png"} alt="Image placeholder" className="img-fluid"/>
+                                        {this.state.product.code ? <img src={"/img/product_" + this.state.product.code + ".png"} alt="Image placeholder" className="img-fluid"/> : null}
                                     </div>
                                 </div>
                                 <div className="col-lg-5">
@@ -75,7 +77,8 @@ class ProductView extends Component {
 
                                         <div className="product_price">{this.state.product.price} lei</div>
                                         <div className="button_container">
-                                            <button type="button" className="button cart_button" onClick={() => this.addProductToCart(this.state.product.code, this.togglePopup)}>
+                                            <button type="button" className="button cart_button"
+                                                    onClick={() => this.addProductToCart(this.state.product.code, this.togglePopup)}>
                                                 {properties.buttons.addToCart}
                                             </button>
                                         </div>

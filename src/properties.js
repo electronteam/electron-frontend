@@ -49,6 +49,16 @@ export const properties = {
         path: "/produs/",
         paramName: "productCode"
     },
+    cart: {
+        path: "/cart",
+        title: "Coșul de cumpărături",
+    },
+    cartentry: {
+        name: "Nume produs",
+        price: "Preț",
+        quantity: "Cantitate",
+        total: "Total"
+    },
     search: {
         path: "/search",
         suggestiveText: "Rezultatele cautarii",
@@ -59,7 +69,8 @@ export const properties = {
         allProducts: "/api/solr/products",
         searchProducts: "/api/solr/searchProducts",
         productByCode: "/api/product",
-        addProductToCart: "/api/addtocart"
+        addProductToCart: "/api/addtocart",
+        currentCart: "/api/currentCart"
     },
     popup: {
         displayText: "Produsul a fost adăugat în coșul de cumpărături."

@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import '../styles/popup.css';
 import {properties} from "../properties";
+import {Link} from "react-router-dom";
 
 class ProductAddedPopup extends Component {
 
@@ -15,9 +16,11 @@ class ProductAddedPopup extends Component {
                             <div className="popup_center">
                                 <p><h4>{properties.popup.displayText}</h4></p>
                                 <div className="actions">
-                                    <button type="button" className="button cart_button">
-                                        {properties.buttons.goToCart}
-                                    </button>
+                                    <Link to={properties.cart.path}>
+                                        <button type="button" className="button cart_button">
+                                            {properties.buttons.goToCart}
+                                        </button>
+                                    </Link>
                                     <button type="button" className="button cart_button" onClick={this.props.closePopup}>
                                         {properties.buttons.continueShopping}
                                     </button>

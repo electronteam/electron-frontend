@@ -48,8 +48,7 @@ class ProductList extends Component {
                                                     <div className="product-img">
                                                         <figure className="block-4-image">
                                                             <Link to={{ pathname: properties.product.path + product.code}}>
-                                                                <img src={"/img/product_" + product.code + ".png"} alt="Image placeholder"
-                                                                     className="img-fluid"/>
+                                                                <img src={"/img/product_" + product.code + ".png"} alt="Image placeholder"/>
                                                             </Link>
                                                         </figure>
                                                     </div>
