@@ -52,6 +52,7 @@ export const properties = {
     cart: {
         path: "/cart",
         title: "Coșul de cumpărături",
+        total: "Total comandă:"
     },
     cartentry: {
         name: "Nume produs",
