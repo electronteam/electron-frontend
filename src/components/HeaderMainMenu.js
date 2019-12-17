@@ -5,6 +5,7 @@ import {Category} from "./Category";
 import {SearchResults} from "./SearchResults";
 import ProductView from "./ProductView";
 import Cart from "./Cart";
+import {Checkout} from "./Checkout";
 
 export function HeaderMainMenu()
 {
@@ -83,6 +84,7 @@ export function HeaderMainMenu()
                        render={(props) => <SearchResults {...props} suggestiveText={properties.search.suggestiveText}/>}/>
                 <Route path={properties.product.path + ":" + properties.product.paramName} component={ProductView}/>
                 <Route path={properties.cart.path} exact={true} component={Cart}/>
+                <Route path={properties.checkout.path} exact={true} component={Checkout}/>
             </BrowserRouter>
     );
 }

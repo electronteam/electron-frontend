@@ -127,3 +127,9 @@ ul
     margin-left: 26px;
     line-height: 60px;
 }
+
+.button_container .to_checkout
+{
+    margin-bottom: 20px;
+    float: right;
+}

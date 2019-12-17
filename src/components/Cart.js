@@ -79,6 +79,14 @@ class Cart extends Component {
                                 </div>
                             </div>
                             : null}
+
+                            <div className="button_container">
+                                <Link to={properties.checkout.path}>
+                                    <button type="button" className="button cart_button to_checkout">
+                                        {properties.buttons.goToCheckout}
+                                    </button>
+                                </Link>
+                            </div>
                         </div>
                         <div className="col-lg-1"></div>
                     </div>

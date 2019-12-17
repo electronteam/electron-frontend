@@ -60,6 +60,9 @@ export const properties = {
         quantity: "Cantitate",
         total: "Total"
     },
+    checkout: {
+        path: "/checkout"
+    },
     search: {
         path: "/search",
         suggestiveText: "Rezultatele cautarii",
@@ -80,5 +83,6 @@ export const properties = {
         addToCart: "Adaugă în coș",
         goToCart: "Vezi coșul",
         continueShopping: "Continuă cumpărăturile",
+        goToCheckout: "Finalizează comanda",
     }
 };
