@@ -61,7 +61,18 @@ export const properties = {
         total: "Total"
     },
     checkout: {
-        path: "/checkout"
+        path: "/checkout",
+        title: "Completați mai jos datele necesare pentru plasarea comenzii",
+        customerName: "Nume:",
+        customerNamePlaceholder: "de ex: Mihaescu",
+        customerLastName: "Prenume:",
+        customerLastNamePlaceholder: "de ex: Ion",
+        customerEmail: "Email:",
+        customerEmailPlaceholder: "de ex: mihaescui@gmail.com",
+        customerAddress: "Adresa:",
+        customerAddressPlaceholder: "de ex: str. Dumbraveni 1/2, ap. 51",
+        customerPhone: "Telefon:",
+        customerPhonePlaceholder: "de ex: 069497268"
     },
     search: {
         path: "/search",
@@ -84,5 +95,6 @@ export const properties = {
         goToCart: "Vezi coșul",
         continueShopping: "Continuă cumpărăturile",
         goToCheckout: "Finalizează comanda",
+        placeOrder: "Plasează comanda",
     }
 };
