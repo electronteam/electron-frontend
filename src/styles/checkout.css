@@ -44,6 +44,11 @@
     -webkit-border-radius: 5px;
 }
 
+.checkout_input::-webkit-input-placeholder
+{
+    font-size: 14px;
+}
+
 .button_container
 {
     margin-bottom: 20px;
