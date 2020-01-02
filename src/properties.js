@@ -85,7 +85,8 @@ export const properties = {
         searchProducts: "/api/solr/searchProducts",
         productByCode: "/api/product",
         addProductToCart: "/api/addtocart",
-        currentCart: "/api/currentCart"
+        currentCart: "/api/currentCart",
+        placeOrder: "/api/placeOrder"
     },
     popup: {
         displayText: "Produsul a fost adăugat în coșul de cumpărături."

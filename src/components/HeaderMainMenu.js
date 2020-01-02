@@ -5,7 +5,7 @@ import {Category} from "./Category";
 import {SearchResults} from "./SearchResults";
 import ProductView from "./ProductView";
 import Cart from "./Cart";
-import {Checkout} from "./Checkout";
+import Checkout from "./Checkout";
 
 export function HeaderMainMenu()
 {
