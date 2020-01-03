@@ -74,6 +74,9 @@ export const properties = {
         customerPhone: "Telefon:",
         customerPhonePlaceholder: "de ex: 069497268"
     },
+    thankyou: {
+        path: "/thankyou"
+    },
     search: {
         path: "/search",
         suggestiveText: "Rezultatele cautarii",

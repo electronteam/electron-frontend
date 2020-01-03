@@ -6,6 +6,7 @@ import {SearchResults} from "./SearchResults";
 import ProductView from "./ProductView";
 import Cart from "./Cart";
 import Checkout from "./Checkout";
+import {ThankYou} from "./ThankYou";
 
 export function HeaderMainMenu()
 {
@@ -85,6 +86,7 @@ export function HeaderMainMenu()
                 <Route path={properties.product.path + ":" + properties.product.paramName} component={ProductView}/>
                 <Route path={properties.cart.path} exact={true} component={Cart}/>
                 <Route path={properties.checkout.path} exact={true} component={Checkout}/>
+                <Route path={properties.thankyou.path} exact={true} component={ThankYou}/>
             </BrowserRouter>
     );
 }

@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Redirect} from 'react-router-dom';
 
 import '../styles/checkout.css';
 import {properties} from "../properties";
@@ -12,8 +13,10 @@ class Checkout extends Component {
             lastName: '',
             email: '',
             address: '',
-            phone: ''
+            phone: '',
+            toThankYouPage: false
         };
+        this.goToThankYouPage = this.goToThankYouPage.bind(this);
     }
 
     inputsChangeHandler = (event) => {
@@ -22,7 +25,7 @@ class Checkout extends Component {
         this.setState({[nam]: val});
     }
 
-    placeOrder()
+    placeOrder(callback)
     {
         let api = properties.api.placeOrder;
         let formData = new FormData();
@@ -36,12 +39,21 @@ class Checkout extends Component {
             method: 'post',
             body: formData
         }).then(function (response) {
-
+            callback();
         })
+    }
+
+    goToThankYouPage()
+    {
+        this.setState(() => ({toThankYouPage: true}));
     }
 
     render()
     {
+        if (this.state.toThankYouPage === true) {
+            return <Redirect to={properties.thankyou.path} />
+        }
+
         return (
                 <div className="container text-center checkout">
                     <div className="row justify-content-center">
@@ -109,7 +121,7 @@ class Checkout extends Component {
 
                     <div className="button_container">
                         <button type="button" className="button cart_button"
-                                onClick={() => this.placeOrder()}>
+                                onClick={() => this.placeOrder(this.goToThankYouPage)}>
                             {properties.buttons.placeOrder}
                         </button>
                     </div>
