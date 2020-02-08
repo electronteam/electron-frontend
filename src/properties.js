@@ -49,6 +49,9 @@ export const properties = {
         path: "/produs/",
         paramName: "productCode"
     },
+    productList: {
+        noProductsDisplayText: "Nu a fost adaugat nici un produs",
+    },
     cart: {
         path: "/cart",
         title: "Coșul de cumpărături",
