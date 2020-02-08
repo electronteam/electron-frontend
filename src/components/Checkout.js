@@ -12,7 +12,8 @@ class Checkout extends Component {
             name: '',
             lastName: '',
             email: '',
-            address: '',
+            city: '',
+            street: '',
             phone: '',
             toThankYouPage: false
         };
@@ -32,7 +33,8 @@ class Checkout extends Component {
         formData.append('name', this.state.name);
         formData.append('lastName', this.state.lastName);
         formData.append('email', this.state.email);
-        formData.append('address', this.state.address);
+        formData.append('address.city', this.state.city);
+        formData.append('address.street', this.state.street);
         formData.append('phone', this.state.phone);
 
         fetch(api, {
@@ -94,14 +96,25 @@ class Checkout extends Component {
                                     </div>
                                 </div>
                                 <div className="form-group row">
-                                    <label htmlFor="address" className="col-sm-2 col-form-label">{properties.checkout.customerAddress}</label>
+                                    <label htmlFor="address" className="col-sm-2 col-form-label">{properties.checkout.customerCity}</label>
                                     <div className="col-sm-10">
                                         <input type="text" className="checkout_input" size="30"
-                                               id="address"
-                                               name="address"
+                                               id="city"
+                                               name="city"
                                                required="required"
                                                onChange={this.inputsChangeHandler}
-                                               placeholder={properties.checkout.customerAddressPlaceholder}/>
+                                               placeholder={properties.checkout.customerCityPlaceholder}/>
+                                    </div>
+                                </div>
+                                <div className="form-group row">
+                                    <label htmlFor="address" className="col-sm-2 col-form-label">{properties.checkout.customerStreet}</label>
+                                    <div className="col-sm-10">
+                                        <input type="text" className="checkout_input" size="30"
+                                               id="street"
+                                               name="street"
+                                               required="required"
+                                               onChange={this.inputsChangeHandler}
+                                               placeholder={properties.checkout.customerStreetPlaceholder}/>
                                     </div>
                                 </div>
                                 <div className="form-group row">

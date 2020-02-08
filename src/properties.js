@@ -72,8 +72,10 @@ export const properties = {
         customerLastNamePlaceholder: "de ex: Mihaescu",
         customerEmail: "Email:",
         customerEmailPlaceholder: "de ex: mihaescui@gmail.com",
-        customerAddress: "Adresa:",
-        customerAddressPlaceholder: "de ex: str. Dumbraveni 1/2, ap. 51",
+        customerCity: "Localitate:",
+        customerCityPlaceholder: "de ex: Chișinău",
+        customerStreet: "Strada:",
+        customerStreetPlaceholder: "de ex: str. Dumbrăveni 1/2, ap. 51",
         customerPhone: "Telefon:",
         customerPhonePlaceholder: "de ex: 069497268"
     },
