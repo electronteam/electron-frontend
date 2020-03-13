@@ -13,7 +13,7 @@ export const properties = {
     header: {
         links: [
             {
-                displayText: "Principala",
+                displayText: "Principală",
                 path: "/",
                 component: Principala
             },
@@ -80,7 +80,16 @@ export const properties = {
         customerPhonePlaceholder: "de ex: 069497268"
     },
     thankyou: {
-        path: "/thankyou"
+        path: "/thankyou",
+        header: "COMANDA A FOST PLASATĂ CU SUCCES !",
+        orderNrText: "Numărul comenzii este:",
+        noOrderDisplayText: "In sesiunea dumneavoastră nu a fost plasată nici o comandă",
+        orderedItem: "Produsul comandat",
+        quantity: "Cantitatea",
+        price: "Preț",
+        totalPrice: "Total",
+        orderTotal: "Total comandă",
+        customerDetails: "Datele personale"
     },
     search: {
         path: "/search",
@@ -94,7 +103,8 @@ export const properties = {
         productByCode: "/api/product",
         addProductToCart: "/api/addtocart",
         currentCart: "/api/currentCart",
-        placeOrder: "/api/placeOrder"
+        placeOrder: "/api/placeOrder",
+        lastPlacedOrder: "/api/lastPlacedOrder"
     },
     popup: {
         displayText: "Produsul a fost adăugat în coșul de cumpărături."
