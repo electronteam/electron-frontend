@@ -6,7 +6,7 @@ import {SearchResults} from "./SearchResults";
 import ProductView from "./ProductView";
 import Cart from "./Cart";
 import Checkout from "./Checkout";
-import {ThankYou} from "./ThankYou";
+import ThankYou from "./ThankYou";
 
 export function HeaderMainMenu()
 {

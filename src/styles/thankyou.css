@@ -1,0 +1,49 @@
+.thankyou {
+    width: 800px;
+    margin-bottom: 40px;
+    padding-left: 85px;
+}
+
+.thankyou table {
+    width: 650px;
+}
+
+.order_details thead {
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.order_details th {
+    padding: 15px 7px;
+    font-size: 16px;
+    color: rgba(0,0,0,0.5);
+}
+
+.order_details td img {
+    vertical-align: middle;
+}
+
+.product_image {
+    width: 133px;
+    height: 133px;
+    float: left;
+}
+
+.product_image img {
+    max-width: 100%;
+}
+
+table .price_row {
+    border-top: 1px solid #e8e8e8;
+}
+
+table .price_row td {
+    padding-top: 20px;
+}
+
+.user_details thead {
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.user_details td, th {
+    padding-bottom: 5px;
+}
