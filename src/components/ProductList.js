@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {properties} from '../properties.js';
 import {Link} from 'react-router-dom';
+import ProductImage from "./ProductImage";
 
 class ProductList extends Component {
 
@@ -49,7 +50,7 @@ class ProductList extends Component {
                                                             <div className="product-img">
                                                                 <figure className="block-4-image">
                                                                     <Link to={{pathname: properties.product.path + product.code}}>
-                                                                        <img src={properties.url.productImage + product.code + ".png"} alt=""/>
+                                                                        <ProductImage productCode={product.code}/>
                                                                     </Link>
                                                                 </figure>
                                                             </div>

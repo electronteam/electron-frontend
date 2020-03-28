@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {properties} from "../properties";
 import '../styles/product.css';
 import ProductAddedPopup from "./ProductAddedPopup";
+import ProductImage from "./ProductImage";
 
 class ProductView extends Component {
 
@@ -67,7 +68,7 @@ class ProductView extends Component {
                                 <div className="col-lg-1"></div>
                                 <div className="col-lg-5">
                                     <div className="image_selected">
-                                        {this.state.product.code ? <img src={properties.url.productImage + this.state.product.code + ".png"} alt="" className="img-fluid"/> : null}
+                                        {this.state.product.code ? <ProductImage productCode={this.state.product.code} /> : null}
                                     </div>
                                 </div>
                                 <div className="col-lg-5">

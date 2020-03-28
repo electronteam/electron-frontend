@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {properties} from "../properties";
 import '../styles/cart.css';
 import {Link} from "react-router-dom";
+import ProductImage from "./ProductImage";
 
 class Cart extends Component {
     constructor()
@@ -44,7 +45,7 @@ class Cart extends Component {
                                                     <li className="cart_item clearfix">
                                                         <div className="cart_item_image">
                                                             <Link to={{pathname: properties.product.path + entry.product.code}}>
-                                                                <img src={properties.url.productImage + entry.product.code + ".png"} alt=""/>
+                                                                <ProductImage productCode={entry.product.code}/>
                                                             </Link>
                                                         </div>
                                                         <div className="cart_item_info d-flex flex-md-row flex-column justify-content-between">

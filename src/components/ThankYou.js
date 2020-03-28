@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {properties} from "../properties";
 import '../styles/thankyou.css';
 import {Link} from "react-router-dom";
+import ProductImage from "./ProductImage";
 
 class ThankYou extends Component {
 
@@ -64,7 +65,7 @@ class ThankYou extends Component {
                                                     <td>
                                                         <div className="product_image">
                                                             <Link to={{pathname: properties.product.path + entry.product.code}}>
-                                                                <img src={properties.url.productImage + entry.product.code + ".png"} alt=""/>
+                                                                <ProductImage productCode={entry.product.code}/>
                                                             </Link>
                                                         </div>
                                                     </td>
