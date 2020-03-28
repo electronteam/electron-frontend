@@ -106,6 +106,9 @@ export const properties = {
         placeOrder: "/api/placeOrder",
         lastPlacedOrder: "/api/lastPlacedOrder"
     },
+    url: {
+        productImage: "http://localhost:8080/medias/product_"
+    },
     popup: {
         displayText: "Produsul a fost adăugat în coșul de cumpărături."
     },

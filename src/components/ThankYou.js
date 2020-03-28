@@ -64,7 +64,7 @@ class ThankYou extends Component {
                                                     <td>
                                                         <div className="product_image">
                                                             <Link to={{pathname: properties.product.path + entry.product.code}}>
-                                                                <img src={"/img/product_" + entry.product.code + ".png"} alt=""/>
+                                                                <img src={properties.url.productImage + entry.product.code + ".png"} alt=""/>
                                                             </Link>
                                                         </div>
                                                     </td>
