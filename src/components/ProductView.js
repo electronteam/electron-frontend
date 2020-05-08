@@ -68,7 +68,7 @@ class ProductView extends Component {
                                 <div className="col-lg-1"></div>
                                 <div className="col-lg-5">
                                     <div className="image_selected">
-                                        {this.state.product.code ? <ProductImage productCode={this.state.product.code} /> : null}
+                                        {this.state.product.code ? <ProductImage imageURL={this.state.product.imageURL} /> : null}
                                     </div>
                                 </div>
                                 <div className="col-lg-5">

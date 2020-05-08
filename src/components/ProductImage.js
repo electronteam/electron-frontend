@@ -5,7 +5,7 @@ class ProductImage extends Component {
     render()
     {
         return (
-                <img src={properties.url.productImage + this.props.productCode + ".png"} alt=""/>
+                <img src={properties.url.imageServerURL + this.props.imageURL} alt={this.props.imageURL}/>
         )
     }
 }
