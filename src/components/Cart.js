@@ -45,7 +45,7 @@ class Cart extends Component {
                                                     <li className="cart_item clearfix">
                                                         <div className="cart_item_image">
                                                             <Link to={{pathname: properties.product.path + entry.product.code}}>
-                                                                <ProductImage productCode={entry.product.code}/>
+                                                                <ProductImage imageURL={entry.product.imageURL}/>
                                                             </Link>
                                                         </div>
                                                         <div className="cart_item_info d-flex flex-md-row flex-column justify-content-between">
