@@ -39,7 +39,8 @@ class Checkout extends Component {
 
         fetch(api, {
             method: 'post',
-            body: formData
+            body: formData,
+            credentials: 'include'
         }).then(function (response) {
             callback();
         })
@@ -52,8 +53,9 @@ class Checkout extends Component {
 
     render()
     {
-        if (this.state.toThankYouPage === true) {
-            return <Redirect to={properties.thankyou.path} />
+        if (this.state.toThankYouPage === true)
+        {
+            return <Redirect to={properties.thankyou.path}/>
         }
 
         return (

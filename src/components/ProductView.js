@@ -23,7 +23,7 @@ class ProductView extends Component {
         const {match: {params}} = this.props;
         let api = properties.api.productByCode + "/" + params.productCode;
 
-        fetch(api)
+        fetch(api, {credentials: 'include'})
                 .then(response => response.json())
                 .then(response => {
                     this.setState({
@@ -52,6 +52,7 @@ class ProductView extends Component {
 
         fetch(api, {
             method: 'post',
+            credentials: 'include',
             body: formData
         }).then(function (response) {
             callback();// "this" inside callback also refers window object

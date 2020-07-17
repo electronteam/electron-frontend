@@ -66,3 +66,12 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+
+## Dockerization
+
+## Building the container
+docker build -t  rbaroncea/electron-frontend .
+
+## Running the container
+docker run -p 3000:80 --network=electron-network --name=electron-frontend rbaroncea/electron-frontend

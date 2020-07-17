@@ -17,7 +17,7 @@ class Cart extends Component {
     {
         let api = properties.api.currentCart;
 
-        fetch(api)
+        fetch(api, {credentials: 'include'})
                 .then(response => response.json())
                 .then(response => {
                     this.setState({

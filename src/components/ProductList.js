@@ -22,7 +22,7 @@ class ProductList extends Component {
             api = properties.api.searchProducts + "/?" + properties.search.term + "=" + this.props.searchTerm;
         }
 
-        fetch(api)
+        fetch(api, {credentials: 'include'})
                 .then(response => response.json())
                 .then(response => {
                     this.setState({

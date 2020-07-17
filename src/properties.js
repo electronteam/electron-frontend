@@ -98,13 +98,13 @@ export const properties = {
         component: SearchResults
     },
     api: {
-        allProducts: "/api/solr/products",
-        searchProducts: "/api/solr/searchProducts",
-        productByCode: "/api/product",
-        addProductToCart: "/api/addtocart",
-        currentCart: "/api/currentCart",
-        placeOrder: "/api/placeOrder",
-        lastPlacedOrder: "/api/lastPlacedOrder"
+        allProducts: "http://localhost:8080/api/solr/products",
+        searchProducts: "http://localhost:8080/api/solr/searchProducts",
+        productByCode: "http://localhost:8080/api/product",
+        addProductToCart: "http://localhost:8080/api/addtocart",
+        currentCart: "http://localhost:8080/api/currentCart",
+        placeOrder: "http://localhost:8080/api/placeOrder",
+        lastPlacedOrder: "http://localhost:8080/api/lastPlacedOrder"
     },
     url: {
         imageServerURL: "http://localhost:8080/"

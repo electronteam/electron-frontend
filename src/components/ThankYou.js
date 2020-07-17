@@ -18,7 +18,7 @@ class ThankYou extends Component {
     {
         let api = properties.api.lastPlacedOrder;
 
-        fetch(api)
+        fetch(api, {credentials: 'include'})
                 .then(response => response.json())
                 .then(response => {
                     this.setState({
