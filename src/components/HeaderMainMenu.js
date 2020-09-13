@@ -121,7 +121,9 @@ class HeaderMainMenu extends Component {
                     <Route path={properties.product.path + ":" + properties.product.paramName}
                            render={(props) => <ProductView {...props} displayCurrentCartCount={this.displayCurrentCartCount}/>}
                     />
-                    <Route path={properties.cart.path} exact={true} component={Cart}/>
+                    <Route path={properties.cart.path} exact={true}
+                           render={(props) => <Cart {...props} displayCurrentCartCount={this.displayCurrentCartCount}/>}
+                    />
                     <Route path={properties.checkout.path} exact={true} component={Checkout}/>
                     <Route path={properties.thankyou.path} exact={true} component={ThankYou}/>
                 </BrowserRouter>

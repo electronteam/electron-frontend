@@ -61,7 +61,8 @@ export const properties = {
         name: "Nume produs",
         price: "Preț",
         quantity: "Cantitate",
-        total: "Total"
+        total: "Total",
+        delete: "Scoate"
     },
     checkout: {
         path: "/checkout",
@@ -102,6 +103,7 @@ export const properties = {
         searchProducts: "http://localhost:8080/api/solr/searchProducts",
         productByCode: "http://localhost:8080/api/product",
         addProductToCart: "http://localhost:8080/api/addtocart",
+        deleteCartEntry: "http://localhost:8080/api/currentCart/deleteEntry",
         currentCart: "http://localhost:8080/api/currentCart",
         currentCartCount: "http://localhost:8080/api/currentCart/count",
         placeOrder: "http://localhost:8080/api/placeOrder",

@@ -41,6 +41,7 @@ class ProductView extends Component {
             showPopup: !this.state.showPopup
         });
 
+        //TODO - think about creating a CartChanged event
         this.props.displayCurrentCartCount();
     }
 

@@ -3,17 +3,29 @@ import {properties} from "../properties";
 import '../styles/cart.css';
 import {Link} from "react-router-dom";
 import ProductImage from "./ProductImage";
+import {Button, ButtonGroup} from "@material-ui/core";
+import DeleteIcon from "@material-ui/icons/Delete";
+
 
 class Cart extends Component {
     constructor(props)
     {
         super(props);
+
+        this.getCurrentCart = this.getCurrentCart.bind(this);
+        this.refreshCartDetails = this.refreshCartDetails.bind(this);
+
         this.state = {
             cart: null
         };
     }
 
     componentDidMount()
+    {
+        this.getCurrentCart();
+    }
+
+    getCurrentCart()
     {
         let api = properties.api.currentCart;
 
@@ -29,6 +41,24 @@ class Cart extends Component {
                 });
     }
 
+    refreshCartDetails()
+    {
+        this.getCurrentCart();
+        this.props.displayCurrentCartCount();
+    }
+
+    deleteCartEntry(productCode, callback)
+    {
+        let api = properties.api.deleteCartEntry + "/" + productCode;
+
+        fetch(api, {
+            method: 'post',
+            credentials: 'include'
+        }).then(function (response) {
+            callback();
+        })
+    }
+
     render()
     {
         return (
@@ -41,45 +71,56 @@ class Cart extends Component {
                                 {this.state.cart ?
                                         this.state.cart.entries.map((entry, index) => {
                                             return (
-                                                <ul className="cart_list" key={index}>
-                                                    <li className="cart_item clearfix">
-                                                        <div className="cart_item_image">
-                                                            <Link to={{pathname: properties.product.path + entry.product.code}}>
-                                                                <ProductImage imageURL={entry.product.imageURL}/>
-                                                            </Link>
-                                                        </div>
-                                                        <div className="cart_item_info d-flex flex-md-row flex-column justify-content-between">
-                                                            <div className="cart_item_name cart_info_col">
-                                                                <div className="cart_item_title">{properties.cartentry.name}</div>
-                                                                <div className="cart_item_text">{entry.product.name}</div>
+                                                    <ul className="cart_list" key={index}>
+                                                        <li className="cart_item clearfix">
+                                                            <div className="cart_item_image">
+                                                                <Link to={{pathname: properties.product.path + entry.product.code}}>
+                                                                    <ProductImage imageURL={entry.product.imageURL}/>
+                                                                </Link>
                                                             </div>
-                                                            <div className="cart_item_price cart_info_col">
-                                                                <div className="cart_item_title">{properties.cartentry.price}</div>
-                                                                <div className="cart_item_text">{entry.product.price} lei</div>
+                                                            <div className="cart_item_info d-flex flex-md-row flex-column justify-content-between">
+                                                                <div className="cart_item_name cart_info_col">
+                                                                    <div className="cart_item_title">{properties.cartentry.name}</div>
+                                                                    <div className="cart_item_text">{entry.product.name}</div>
+                                                                </div>
+                                                                <div className="cart_item_price cart_info_col">
+                                                                    <div className="cart_item_title">{properties.cartentry.price}</div>
+                                                                    <div className="cart_item_text">{entry.product.price} lei</div>
+                                                                </div>
+                                                                <div className="cart_item_quantity cart_info_col">
+                                                                    <div className="cart_item_title">{properties.cartentry.quantity}</div>
+                                                                    <div className="cart_item_text">{entry.quantity}</div>
+                                                                </div>
+                                                                <div className="cart_item_total cart_info_col">
+                                                                    <div className="cart_item_title">{properties.cartentry.total}</div>
+                                                                    <div className="cart_item_text">{entry.totalPrice} lei</div>
+                                                                </div>
+                                                                <div className="cart_item_total cart_info_col">
+                                                                    <div className="cart_item_title">{properties.cartentry.delete}</div>
+                                                                    <div className="cart_item_button">
+                                                                        <ButtonGroup color="secondary" aria-label="outlined primary button group">
+                                                                            <Button aria-label="delete"
+                                                                                    onClick={() => this.deleteCartEntry(entry.product.code, this.refreshCartDetails)}>
+                                                                                <DeleteIcon fontSize="small"/>
+                                                                            </Button>
+                                                                        </ButtonGroup>
+                                                                    </div>
+                                                                </div>
                                                             </div>
-                                                            <div className="cart_item_quantity cart_info_col">
-                                                                <div className="cart_item_title">{properties.cartentry.quantity}</div>
-                                                                <div className="cart_item_text">{entry.quantity}</div>
-                                                            </div>
-                                                            <div className="cart_item_total cart_info_col">
-                                                                <div className="cart_item_title">{properties.cartentry.total}</div>
-                                                                <div className="cart_item_text">{entry.totalPrice} lei</div>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                </ul>
+                                                        </li>
+                                                    </ul>
                                             )
                                         })
                                         : null}
                             </div>
                             {this.state.cart ?
-                            <div className="order_total">
-                                <div className="order_total_content text-md-right">
-                                    <div className="order_total_title">{properties.cart.total}</div>
-                                    <div className="order_total_amount">{this.state.cart.totalPrice} lei</div>
-                                </div>
-                            </div>
-                            : null}
+                                    <div className="order_total">
+                                        <div className="order_total_content text-md-right">
+                                            <div className="order_total_title">{properties.cart.total}</div>
+                                            <div className="order_total_amount">{this.state.cart.totalPrice} lei</div>
+                                        </div>
+                                    </div>
+                                    : null}
 
                             <div className="button_container">
                                 <Link to={properties.checkout.path}>
