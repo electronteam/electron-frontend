@@ -6,9 +6,9 @@ import ProductImage from "./ProductImage";
 
 class ProductView extends Component {
 
-    constructor()
+    constructor(props)
     {
-        super();
+        super(props);
         this.state = {
             product: {
                 code: null
@@ -40,6 +40,8 @@ class ProductView extends Component {
         this.setState({
             showPopup: !this.state.showPopup
         });
+
+        this.props.displayCurrentCartCount();
     }
 
     // outer function scope                                        -

@@ -5,9 +5,9 @@ import {Link} from "react-router-dom";
 import ProductImage from "./ProductImage";
 
 class Cart extends Component {
-    constructor()
+    constructor(props)
     {
-        super();
+        super(props);
         this.state = {
             cart: null
         };

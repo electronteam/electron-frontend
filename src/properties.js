@@ -103,6 +103,7 @@ export const properties = {
         productByCode: "http://localhost:8080/api/product",
         addProductToCart: "http://localhost:8080/api/addtocart",
         currentCart: "http://localhost:8080/api/currentCart",
+        currentCartCount: "http://localhost:8080/api/currentCart/count",
         placeOrder: "http://localhost:8080/api/placeOrder",
         lastPlacedOrder: "http://localhost:8080/api/lastPlacedOrder"
     },
