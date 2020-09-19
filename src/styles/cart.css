@@ -139,3 +139,25 @@ ul
     margin-bottom: 20px;
     float: right;
 }
+
+.cart-item__quantity__change
+{
+    text-align: center;
+    width: 24px;
+    height: 24px;
+    border: 1px solid #ccc;
+    padding: 0;
+    line-height: 0;
+    color: red;
+    background-color: white;
+}
+
+.decrease-quantity
+{
+    margin-right: 8px;
+}
+
+.increase-quantity
+{
+    margin-left: 8px;
+}

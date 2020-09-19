@@ -12,12 +12,13 @@ class Cart extends Component {
     {
         super(props);
 
-        this.getCurrentCart = this.getCurrentCart.bind(this);
-        this.refreshCartDetails = this.refreshCartDetails.bind(this);
-
         this.state = {
             cart: null
         };
+
+        this.getCurrentCart = this.getCurrentCart.bind(this);
+        this.updateCart = this.updateCart.bind(this);
+        this.refreshCartDetails = this.refreshCartDetails.bind(this);
     }
 
     componentDidMount()
@@ -59,6 +60,22 @@ class Cart extends Component {
         })
     }
 
+    updateCart(productCode, newQty, callback)
+    {
+        let api = properties.api.updateCart;
+        let formData = new FormData();
+        formData.append('productCode', productCode);
+        formData.append('newQty', newQty);
+
+        fetch(api, {
+            method: 'post',
+            credentials: 'include',
+            body: formData
+        }).then(function (response) {
+            callback();
+        })
+    }
+
     render()
     {
         return (
@@ -89,7 +106,23 @@ class Cart extends Component {
                                                                 </div>
                                                                 <div className="cart_item_quantity cart_info_col">
                                                                     <div className="cart_item_title">{properties.cartentry.quantity}</div>
-                                                                    <div className="cart_item_text">{entry.quantity}</div>
+                                                                    <div className="cart_item_text">
+                                                                        <button type="button"
+                                                                                className="cart-item__quantity__change decrease-quantity"
+                                                                                onClick={
+                                                                                    () => this.updateCart(entry.product.code, entry.quantity - 1, this.refreshCartDetails)
+                                                                                }>
+                                                                            -
+                                                                        </button>
+                                                                        {entry.quantity}
+                                                                        <button type="button"
+                                                                                className="cart-item__quantity__change increase-quantity"
+                                                                                onClick={
+                                                                                    () => this.updateCart(entry.product.code, entry.quantity + 1, this.refreshCartDetails)
+                                                                                }>
+                                                                            +
+                                                                        </button>
+                                                                    </div>
                                                                 </div>
                                                                 <div className="cart_item_total cart_info_col">
                                                                     <div className="cart_item_title">{properties.cartentry.total}</div>
