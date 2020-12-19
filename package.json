@@ -3,19 +3,36 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/plugin-transform-runtime": "^7.12.1",
+    "@babel/preset-env": "^7.12.1",
+    "@babel/preset-react": "^7.12.1",
     "@material-ui/core": "latest",
+    "babel-loader": "^8.1.0",
     "bootstrap": "^4.3.1",
+    "clean-webpack-plugin": "^3.0.0",
+    "css": "^3.0.0",
+    "css-loader": "^5.0.0",
+    "html-webpack-plugin": "^4.5.0",
     "jquery": "^3.4.1",
+    "loader": "^2.1.1",
     "material-ui": "^0.20.0",
     "popper.js": "^1.15.0",
     "react": "^16.8.5",
     "react-dom": "^16.8.5",
     "react-router-dom": "^5.0.0",
-    "react-scripts": "2.1.8"
+    "react-scripts": "2.1.8",
+    "style": "0.0.3",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.4.0",
+    "webpack-cli": "^4.1.0",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^5.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "webpack --config config/webpack.prod.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -29,6 +46,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "@material-ui/icons": "^4.9.1"
+    "@material-ui/icons": "^4.9.1",
+    "babel-plugin-transform-class-properties": "^6.24.1"
   }
 }
