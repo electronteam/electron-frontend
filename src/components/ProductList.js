@@ -60,7 +60,7 @@ class ProductList extends Component {
                                                                     <Link to={{pathname: properties.product.path + product.code}}>
                                                                         <h1 className="product-name">{product.name}</h1>
                                                                     </Link>
-                                                                    <h4 className="product-price">{product.price} lei</h4>
+                                                                    <h4 className="product-price">{product.price} {this.props.t('currency')}</h4>
                                                                 </div>
                                                             </div>
                                                         </div>

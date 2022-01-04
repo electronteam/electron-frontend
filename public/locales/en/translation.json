@@ -1,6 +1,7 @@
 {
   "language": "English",
   "mostSold": "Most sold products",
+  "currency": "USD",
   "productList": {
     "noProductsDisplayText": "No product added"
   },

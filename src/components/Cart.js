@@ -102,7 +102,7 @@ class Cart extends Component {
                                                                 </div>
                                                                 <div className="cart_item_price cart_info_col">
                                                                     <div className="cart_item_title">{this.props.t('cartentry.price')}</div>
-                                                                    <div className="cart_item_text">{entry.product.price} lei</div>
+                                                                    <div className="cart_item_text">{entry.product.price} {this.props.t('currency')}</div>
                                                                 </div>
                                                                 <div className="cart_item_quantity cart_info_col">
                                                                     <div className="cart_item_title">{this.props.t('cartentry.quantity')}</div>
@@ -126,7 +126,7 @@ class Cart extends Component {
                                                                 </div>
                                                                 <div className="cart_item_total cart_info_col">
                                                                     <div className="cart_item_title">{this.props.t('cartentry.total')}</div>
-                                                                    <div className="cart_item_text">{entry.totalPrice} lei</div>
+                                                                    <div className="cart_item_text">{entry.totalPrice} {this.props.t('currency')}</div>
                                                                 </div>
                                                                 <div className="cart_item_total cart_info_col">
                                                                     <div className="cart_item_title">{this.props.t('cartentry.delete')}</div>
@@ -150,7 +150,7 @@ class Cart extends Component {
                                     <div className="order_total">
                                         <div className="order_total_content text-md-right">
                                             <div className="order_total_title">{this.props.t('cart.total')}</div>
-                                            <div className="order_total_amount">{this.state.cart.totalPrice} lei</div>
+                                            <div className="order_total_amount">{this.state.cart.totalPrice} {this.props.t('currency')}</div>
                                         </div>
                                     </div>
                                     : null}

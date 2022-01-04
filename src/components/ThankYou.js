@@ -74,13 +74,13 @@ class ThankYou extends Component {
                                                         {entry.product.name}
                                                     </td>
                                                     <td>
-                                                        {entry.product.price} lei
+                                                        {entry.product.price} {this.props.t('currency')}
                                                     </td>
                                                     <td className="text-center">
                                                         {entry.quantity}
                                                     </td>
                                                     <td className="text-center">
-                                                        {entry.totalPrice} lei
+                                                        {entry.totalPrice} {this.props.t('currency')}
                                                     </td>
                                                 </tr>
                                         )
@@ -91,7 +91,7 @@ class ThankYou extends Component {
                                         </td>
                                         <td className="text-center">
                                             <strong>
-                                                {this.state.order.totalPrice} lei
+                                                {this.state.order.totalPrice} {this.props.t('currency')}
                                             </strong>
                                         </td>
                                     </tr>

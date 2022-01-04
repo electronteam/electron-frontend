@@ -1,6 +1,7 @@
 {
   "language": "Română",
   "mostSold": "Cele mai vândute produse",
+  "currency": "lei",
   "productList": {
     "noProductsDisplayText": "Nu a fost adaugat nici un produs"
   },
