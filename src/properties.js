@@ -13,34 +13,30 @@ export const properties = {
     header: {
         links: [
             {
-                displayText: "Principală",
+                id: "main",
                 path: "/",
                 component: Principala
             },
             {
-                displayText: "Electronice",
-                path: "/electronice",
-                name: "electronice",
-                suggestiveText: "Pagina produselor electronice",
+                id: "electronics",
+                path: "/electronics",
                 isCategoryLink: true,
                 component: Category
             },
             {
-                displayText: "Electromontaj",
-                path: "/electromontaj",
-                name: "electromontaj",
-                suggestiveText: "Pagina produselor de electromontaj",
+                id: "electrical",
+                path: "/electrical",
                 isCategoryLink: true,
                 component: Category
             },
             {
-                displayText: "Articole",
-                path: "/articole",
+                id: "articles",
+                path: "/articles",
                 component: Articole
             },
             {
-                displayText: "Contacte",
-                path: "/contacte",
+                id: "contacts",
+                path: "/contacts",
                 component: Contacte
             }
         ]

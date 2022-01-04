@@ -7,6 +7,7 @@ import ProductView from "./ProductView";
 import Cart from "./Cart";
 import Checkout from "./Checkout";
 import ThankYou from "./ThankYou";
+import { withTranslation } from 'react-i18next';
 
 class HeaderMainMenu extends Component {
 
@@ -89,7 +90,7 @@ class HeaderMainMenu extends Component {
                                     return (
                                             <li key={index}>
                                                 <Link to={link.path} className="link">
-                                                    {link.displayText}
+                                                    {this.props.t('header.' + link.id + '.display')}
                                                 </Link>
                                             </li>
                                     )
@@ -104,8 +105,7 @@ class HeaderMainMenu extends Component {
                             return <Route path={link.path}
                                           exact={true}
                                           render={(props) => <Category {...props}
-                                                                       categoryName={link.name}
-                                                                       suggestiveText={link.suggestiveText}/>}
+                                                                       suggestiveText={this.props.t('header.' + link.id + '.suggestive')}/>}
                                           key={index}/>
                         }
                         else
@@ -131,4 +131,4 @@ class HeaderMainMenu extends Component {
     }
 }
 
-export default HeaderMainMenu;
+export default withTranslation()(HeaderMainMenu);

@@ -2,6 +2,27 @@
   "language": "English",
   "mostSold": "Most sold products",
   "currency": "USD",
+  "header": {
+    "main": {
+      "display": "Main"
+    },
+    "electronics": {
+      "display": "Electronics",
+      "suggestive": "Electronic products page"
+    },
+    "electrical": {
+      "display": "Electrical",
+      "suggestive": "Electrical assembly products page"
+    },
+    "articles": {
+      "display": "Articles",
+      "suggestive": "Articles page"
+    },
+    "contacts": {
+      "display": "Contacts",
+      "suggestive": "Contacts page"
+    }
+  },
   "productList": {
     "noProductsDisplayText": "No product added"
   },

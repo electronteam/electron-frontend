@@ -2,6 +2,27 @@
   "language": "Română",
   "mostSold": "Cele mai vândute produse",
   "currency": "lei",
+  "header": {
+    "main": {
+      "display": "Principală"
+    },
+    "electronics": {
+      "display": "Electronice",
+      "suggestive": "Pagina produselor electronice"
+    },
+    "electrical": {
+      "display": "Electromontaj",
+      "suggestive": "Pagina produselor de electromontaj"
+    },
+    "articles": {
+      "display": "Articole",
+      "suggestive": "Pagina cu articole"
+    },
+    "contacts": {
+      "display": "Contacte",
+      "suggestive": "Pagina de contacte"
+    }
+  },
   "productList": {
     "noProductsDisplayText": "Nu a fost adaugat nici un produs"
   },
