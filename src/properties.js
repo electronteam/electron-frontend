@@ -49,52 +49,17 @@ export const properties = {
         path: "/produs/",
         paramName: "productCode"
     },
-    productList: {
-        noProductsDisplayText: "Nu a fost adaugat nici un produs",
-    },
     cart: {
-        path: "/cart",
-        title: "Coșul de cumpărături",
-        total: "Total comandă:"
-    },
-    cartentry: {
-        name: "Nume produs",
-        price: "Preț",
-        quantity: "Cantitate",
-        total: "Total",
-        delete: "Scoate"
+        path: "/cart"
     },
     checkout: {
-        path: "/checkout",
-        title: "Completați mai jos datele necesare pentru plasarea comenzii",
-        customerName: "Prenume:",
-        customerNamePlaceholder: "de ex: Ion",
-        customerLastName: "Nume:",
-        customerLastNamePlaceholder: "de ex: Mihaescu",
-        customerEmail: "Email:",
-        customerEmailPlaceholder: "de ex: mihaescui@gmail.com",
-        customerCity: "Localitate:",
-        customerCityPlaceholder: "de ex: Chișinău",
-        customerStreet: "Strada:",
-        customerStreetPlaceholder: "de ex: str. Dumbrăveni 1/2, ap. 51",
-        customerPhone: "Telefon:",
-        customerPhonePlaceholder: "de ex: 069497268"
+        path: "/checkout"
     },
     thankyou: {
-        path: "/thankyou",
-        header: "COMANDA A FOST PLASATĂ CU SUCCES !",
-        orderNrText: "Numărul comenzii este:",
-        noOrderDisplayText: "In sesiunea dumneavoastră nu a fost plasată nici o comandă",
-        orderedItem: "Produsul comandat",
-        quantity: "Cantitatea",
-        price: "Preț",
-        totalPrice: "Total",
-        orderTotal: "Total comandă",
-        customerDetails: "Datele personale"
+        path: "/thankyou"
     },
     search: {
         path: "/search",
-        suggestiveText: "Rezultatele cautarii",
         term: "term",
         component: SearchResults
     },
@@ -112,15 +77,5 @@ export const properties = {
     },
     url: {
         imageServerURL: "http://localhost:8080/"
-    },
-    popup: {
-        displayText: "Produsul a fost adăugat în coșul de cumpărături."
-    },
-    buttons: {
-        addToCart: "Adaugă în coș",
-        goToCart: "Vezi coșul",
-        continueShopping: "Continuă cumpărăturile",
-        goToCheckout: "Finalizează comanda",
-        placeOrder: "Plasează comanda",
     }
 };

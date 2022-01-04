@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import {Redirect} from 'react-router-dom';
-
 import '../styles/checkout.css';
 import {properties} from "../properties";
+import { withTranslation } from 'react-i18next';
 
 class Checkout extends Component {
     constructor(props)
@@ -62,72 +62,72 @@ class Checkout extends Component {
                 <div className="container text-center checkout">
                     <div className="row justify-content-center">
                         <div className="billing">
-                            <div className="checkout_title">{properties.checkout.title}</div>
+                            <div className="checkout_title">{this.props.t('checkout.title')}</div>
                             <div className="checkout_form_container">
-                                <div className="form-group row">
-                                    <label htmlFor="name" className="col-sm-2 col-form-label">{properties.checkout.customerName}</label>
-                                    <div className="col-sm-10">
+                                <div className="form-group row text-left">
+                                    <label htmlFor="name" className="col-sm-3 col-form-label">{this.props.t('checkout.customerName')}</label>
+                                    <div className="col-sm-9">
                                         <input type="text" className="checkout_input" size="30"
                                                id="name"
                                                name="name"
                                                required="required"
                                                onChange={this.inputsChangeHandler}
-                                               placeholder={properties.checkout.customerNamePlaceholder}/>
+                                               placeholder={this.props.t('checkout.customerNamePlaceholder')}/>
                                     </div>
                                 </div>
-                                <div className="form-group row">
-                                    <label htmlFor="lastName" className="col-sm-2 col-form-label">{properties.checkout.customerLastName}</label>
-                                    <div className="col-sm-10">
+                                <div className="form-group row text-left">
+                                    <label htmlFor="lastName" className="col-sm-3 col-form-label">{this.props.t('checkout.customerLastName')}</label>
+                                    <div className="col-sm-9">
                                         <input type="text" className="checkout_input" size="30"
                                                id="lastName"
                                                name="lastName"
                                                required="required"
                                                onChange={this.inputsChangeHandler}
-                                               placeholder={properties.checkout.customerLastNamePlaceholder}/>
+                                               placeholder={this.props.t('checkout.customerLastNamePlaceholder')}/>
                                     </div>
                                 </div>
-                                <div className="form-group row">
-                                    <label htmlFor="email" className="col-sm-2 col-form-label">{properties.checkout.customerEmail}</label>
-                                    <div className="col-sm-10">
+                                <div className="form-group row text-left">
+                                    <label htmlFor="email" className="col-sm-3 col-form-label">{this.props.t('checkout.customerEmail')}</label>
+                                    <div className="col-sm-9">
                                         <input type="text" className="checkout_input" size="30"
                                                id="email"
                                                name="email"
                                                required="required"
                                                onChange={this.inputsChangeHandler}
-                                               placeholder={properties.checkout.customerEmailPlaceholder}/>
+                                               placeholder={this.props.t('checkout.customerEmailPlaceholder')}/>
                                     </div>
                                 </div>
-                                <div className="form-group row">
-                                    <label htmlFor="address" className="col-sm-2 col-form-label">{properties.checkout.customerCity}</label>
-                                    <div className="col-sm-10">
+                                <div className="form-group row text-left">
+                                    <label htmlFor="address" className="col-sm-3 col-form-label">{this.props.t('checkout.customerCity')}</label>
+                                    <div className="col-sm-9">
                                         <input type="text" className="checkout_input" size="30"
                                                id="city"
                                                name="city"
                                                required="required"
                                                onChange={this.inputsChangeHandler}
-                                               placeholder={properties.checkout.customerCityPlaceholder}/>
+                                               placeholder={this.props.t('checkout.customerCityPlaceholder')}/>
                                     </div>
                                 </div>
-                                <div className="form-group row">
-                                    <label htmlFor="address" className="col-sm-2 col-form-label">{properties.checkout.customerStreet}</label>
-                                    <div className="col-sm-10">
+                                <div className="form-group row text-left">
+                                    <label htmlFor="address" className="col-sm-3 col-form-label">{this.props.t('checkout.customerStreet')}</label>
+                                    <div className="col-sm-9">
                                         <input type="text" className="checkout_input" size="30"
                                                id="street"
                                                name="street"
                                                required="required"
                                                onChange={this.inputsChangeHandler}
-                                               placeholder={properties.checkout.customerStreetPlaceholder}/>
+                                               placeholder={this.props.t('checkout.customerStreetPlaceholder')}/>
                                     </div>
                                 </div>
-                                <div className="form-group row">
-                                    <label htmlFor="phone" className="col-sm-2 col-form-label">{properties.checkout.customerPhone}</label>
-                                    <div className="col-sm-10">
+                                <div className="form-group row text-left">
+                                    <label htmlFor="phone" className="col-sm-3 col-form-label">{this.props.t('checkout.customerPhone')}</label>
+                                    <div className="col-sm-9">
                                         <input type="text" className="checkout_input" size="30"
                                                id="phone"
                                                name="phone"
                                                required="required"
                                                onChange={this.inputsChangeHandler}
-                                               placeholder={properties.checkout.customerPhonePlaceholder}/>
+                                               placeholder={this.props.t('checkout.customerPhonePlaceholder')}/>
                                     </div>
                                 </div>
                             </div>
@@ -137,7 +137,7 @@ class Checkout extends Component {
                     <div className="button_container">
                         <button type="button" className="button cart_button"
                                 onClick={() => this.placeOrder(this.goToThankYouPage)}>
-                            {properties.buttons.placeOrder}
+                            {this.props.t('buttons.placeOrder')}
                         </button>
                     </div>
                 </div>
@@ -145,4 +145,4 @@ class Checkout extends Component {
     }
 }
 
-export default Checkout;
+export default withTranslation()(Checkout);

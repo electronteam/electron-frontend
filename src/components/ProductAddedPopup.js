@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import '../styles/popup.css';
 import {properties} from "../properties";
 import {Link} from "react-router-dom";
+import { withTranslation } from 'react-i18next';
 
 class ProductAddedPopup extends Component {
 
@@ -14,15 +15,15 @@ class ProductAddedPopup extends Component {
                         <div className="popup-text">
                             <img src="/img/tick-icon.png" alt="" className="tick-icon"/>
                             <div className="popup_center">
-                                <h4><p>{properties.popup.displayText}</p></h4>
+                                <h4><p>{this.props.t('cart.productAddedConfirmation')}</p></h4>
                                 <div className="actions">
                                     <Link to={properties.cart.path}>
                                         <button type="button" className="button cart_button">
-                                            {properties.buttons.goToCart}
+                                            {this.props.t('buttons.goToCart')}
                                         </button>
                                     </Link>
                                     <button type="button" className="button cart_button" onClick={this.props.closePopup}>
-                                        {properties.buttons.continueShopping}
+                                        {this.props.t('buttons.continueShopping')}
                                     </button>
                                 </div>
                             </div>
@@ -33,4 +34,4 @@ class ProductAddedPopup extends Component {
     }
 }
 
-export default ProductAddedPopup;
+export default withTranslation()(ProductAddedPopup);

@@ -3,6 +3,7 @@ import {properties} from "../properties";
 import '../styles/thankyou.css';
 import {Link} from "react-router-dom";
 import ProductImage from "./ProductImage";
+import {withTranslation} from 'react-i18next';
 
 class ThankYou extends Component {
 
@@ -36,27 +37,27 @@ class ThankYou extends Component {
                 <div className="container text-left justify-content-center thankyou">
                     {this.state.order ?
                             <div>
-                                <h2>{properties.thankyou.header}</h2>
-                                {properties.thankyou.orderNrText} <strong>{this.state.order.id}</strong>
+                                <h2>{this.props.t('thankyou.header')}</h2>
+                                {this.props.t('thankyou.orderNrText')} <strong>{this.state.order.id}</strong>
                                 <br/>
                                 <br/>
 
                                 <table className="order_details">
                                     <thead>
-                                        <tr>
-                                            <th colSpan="2">
-                                                {properties.thankyou.orderedItem}
-                                            </th>
-                                            <th>
-                                                {properties.thankyou.price}
-                                            </th>
-                                            <th className="text-center">
-                                                {properties.thankyou.quantity}
-                                            </th>
-                                            <th className="text-center">
-                                                {properties.thankyou.totalPrice}
-                                            </th>
-                                        </tr>
+                                    <tr>
+                                        <th colSpan="2">
+                                            {this.props.t('thankyou.orderedItem')}
+                                        </th>
+                                        <th>
+                                            {this.props.t('thankyou.price')}
+                                        </th>
+                                        <th className="text-center">
+                                            {this.props.t('thankyou.quantity')}
+                                        </th>
+                                        <th className="text-center">
+                                            {this.props.t('thankyou.totalPrice')}
+                                        </th>
+                                    </tr>
                                     </thead>
                                     <tbody>
                                     {this.state.order.entries.map((entry, index) => {
@@ -86,7 +87,7 @@ class ThankYou extends Component {
                                     })}
                                     <tr className="price_row">
                                         <td colSpan="4" className="text-right">
-                                            {properties.thankyou.orderTotal}
+                                            {this.props.t('thankyou.orderTotal')}
                                         </td>
                                         <td className="text-center">
                                             <strong>
@@ -100,36 +101,36 @@ class ThankYou extends Component {
                                 <br/>
                                 <table className="user_details">
                                     <thead>
-                                        <th>
-                                            {properties.thankyou.customerDetails}
-                                        </th>
+                                    <th>
+                                        {this.props.t('thankyou.customerDetails')}
+                                    </th>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td>
-                                                {this.state.order.userData.name} {this.state.order.userData.lastName}
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                {this.state.order.userData.email}
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                {this.state.order.userData.phone}
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                {this.state.order.deliveryAddress.city}
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                {this.state.order.deliveryAddress.street}
-                                            </td>
-                                        </tr>
+                                    <tr>
+                                        <td>
+                                            {this.state.order.userData.name} {this.state.order.userData.lastName}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            {this.state.order.userData.email}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            {this.state.order.userData.phone}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            {this.state.order.deliveryAddress.city}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            {this.state.order.deliveryAddress.street}
+                                        </td>
+                                    </tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -139,4 +140,4 @@ class ThankYou extends Component {
     }
 }
 
-export default ThankYou;
+export default withTranslation()(ThankYou);

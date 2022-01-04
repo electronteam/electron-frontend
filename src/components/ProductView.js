@@ -3,6 +3,7 @@ import {properties} from "../properties";
 import '../styles/product.css';
 import ProductAddedPopup from "./ProductAddedPopup";
 import ProductImage from "./ProductImage";
+import { withTranslation } from 'react-i18next';
 
 class ProductView extends Component {
 
@@ -64,6 +65,9 @@ class ProductView extends Component {
 
     render()
     {
+        // const { t } = this.props;
+        // const {t} = useTranslation();
+
         return (
                 <div className="container text-center">
                     <div className="single_product">
@@ -84,7 +88,7 @@ class ProductView extends Component {
                                         <div className="button_container">
                                             <button type="button" className="button cart_button"
                                                     onClick={() => this.addProductToCart(this.state.product.code, this.togglePopup)}>
-                                                {properties.buttons.addToCart}
+                                                {this.props.t('buttons.addToCart')}
                                             </button>
                                         </div>
                                     </div>
@@ -99,4 +103,4 @@ class ProductView extends Component {
     }
 }
 
-export default ProductView;
+export default withTranslation()(ProductView);

@@ -5,7 +5,7 @@ import {Link} from "react-router-dom";
 import ProductImage from "./ProductImage";
 import {Button, ButtonGroup} from "@material-ui/core";
 import DeleteIcon from "@material-ui/icons/Delete";
-
+import { withTranslation } from 'react-i18next';
 
 class Cart extends Component {
     constructor(props)
@@ -83,7 +83,7 @@ class Cart extends Component {
                     <div className="row">
                         <div className="col-lg-1"></div>
                         <div className="col-lg-10">
-                            <div className="cart_title">{properties.cart.title}</div>
+                            <div className="cart_title">{this.props.t('cart.title')}</div>
                             <div className="cart_items">
                                 {this.state.cart ?
                                         this.state.cart.entries.map((entry, index) => {
@@ -97,15 +97,15 @@ class Cart extends Component {
                                                             </div>
                                                             <div className="cart_item_info d-flex flex-md-row flex-column justify-content-between">
                                                                 <div className="cart_item_name cart_info_col">
-                                                                    <div className="cart_item_title">{properties.cartentry.name}</div>
+                                                                    <div className="cart_item_title">{this.props.t('cartentry.name')}</div>
                                                                     <div className="cart_item_text">{entry.product.name}</div>
                                                                 </div>
                                                                 <div className="cart_item_price cart_info_col">
-                                                                    <div className="cart_item_title">{properties.cartentry.price}</div>
+                                                                    <div className="cart_item_title">{this.props.t('cartentry.price')}</div>
                                                                     <div className="cart_item_text">{entry.product.price} lei</div>
                                                                 </div>
                                                                 <div className="cart_item_quantity cart_info_col">
-                                                                    <div className="cart_item_title">{properties.cartentry.quantity}</div>
+                                                                    <div className="cart_item_title">{this.props.t('cartentry.quantity')}</div>
                                                                     <div className="cart_item_text">
                                                                         <button type="button"
                                                                                 className="cart-item__quantity__change decrease-quantity"
@@ -125,11 +125,11 @@ class Cart extends Component {
                                                                     </div>
                                                                 </div>
                                                                 <div className="cart_item_total cart_info_col">
-                                                                    <div className="cart_item_title">{properties.cartentry.total}</div>
+                                                                    <div className="cart_item_title">{this.props.t('cartentry.total')}</div>
                                                                     <div className="cart_item_text">{entry.totalPrice} lei</div>
                                                                 </div>
                                                                 <div className="cart_item_total cart_info_col">
-                                                                    <div className="cart_item_title">{properties.cartentry.delete}</div>
+                                                                    <div className="cart_item_title">{this.props.t('cartentry.delete')}</div>
                                                                     <div className="cart_item_button">
                                                                         <ButtonGroup color="secondary" aria-label="outlined primary button group">
                                                                             <Button aria-label="delete"
@@ -149,7 +149,7 @@ class Cart extends Component {
                             {this.state.cart ?
                                     <div className="order_total">
                                         <div className="order_total_content text-md-right">
-                                            <div className="order_total_title">{properties.cart.total}</div>
+                                            <div className="order_total_title">{this.props.t('cart.total')}</div>
                                             <div className="order_total_amount">{this.state.cart.totalPrice} lei</div>
                                         </div>
                                     </div>
@@ -158,7 +158,7 @@ class Cart extends Component {
                             <div className="button_container">
                                 <Link to={properties.checkout.path}>
                                     <button type="button" className="button cart_button to_checkout">
-                                        {properties.buttons.goToCheckout}
+                                        {this.props.t('buttons.goToCheckout')}
                                     </button>
                                 </Link>
                             </div>
@@ -170,4 +170,4 @@ class Cart extends Component {
     }
 }
 
-export default Cart;
+export default withTranslation()(Cart);

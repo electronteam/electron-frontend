@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {properties} from '../properties.js';
 import {Link} from 'react-router-dom';
 import ProductImage from "./ProductImage";
+import { withTranslation } from 'react-i18next';
 
 class ProductList extends Component {
 
@@ -68,12 +69,11 @@ class ProductList extends Component {
                                         )
                                     })}
                                 </div>
-                                : <h1>{properties.productList.noProductsDisplayText}</h1>}
+                                : <h1>{this.props.t('productList.noProductsDisplayText')}</h1>}
                     </div>
-                    {/*col-lg-12*/}
                 </div>
         );
     }
 }
 
-export default ProductList;
+export default withTranslation()(ProductList);

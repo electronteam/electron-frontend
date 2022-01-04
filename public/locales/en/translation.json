@@ -1,0 +1,55 @@
+{
+  "language": "English",
+  "mostSold": "Most sold products",
+  "productList": {
+    "noProductsDisplayText": "No product added"
+  },
+  "buttons": {
+    "addToCart": "Add to cart",
+    "goToCart": "Go to cart",
+    "continueShopping": "Continue shopping",
+    "goToCheckout": "Go to checkout",
+    "placeOrder": "Place order"
+  },
+  "search": {
+    "suggestiveText": "Search results"
+  },
+  "cart": {
+    "title": "Your basket",
+    "total": "Order total:",
+    "productAddedConfirmation": "The product has been added to your basket."
+  },
+  "cartentry": {
+    "name": "Product name",
+    "price": "Price",
+    "quantity": "Quantity",
+    "total": "Total",
+    "delete": "Remove"
+  },
+  "checkout": {
+    "title": "Fill in below the data required to place the order",
+    "customerName": "First name:",
+    "customerNamePlaceholder": "e.g.: John",
+    "customerLastName": "Last name:",
+    "customerLastNamePlaceholder": "e.g.: Locke",
+    "customerEmail": "Email:",
+    "customerEmailPlaceholder": "e.g.: johnlocke@gmail.com",
+    "customerCity": "City:",
+    "customerCityPlaceholder": "e.g.: London",
+    "customerStreet": "Street:",
+    "customerStreetPlaceholder": "e.g.: 221B Baker Street",
+    "customerPhone": "Phone:",
+    "customerPhonePlaceholder": "e.g.: 07911 123456"
+  },
+  "thankyou": {
+    "header": "ORDER SUCCESSFULLY PLACED !",
+    "orderNrText": "Order number is:",
+    "noOrderDisplayText": "No orders were placed in your session",
+    "orderedItem": "Ordered product",
+    "quantity": "Quantity",
+    "price": "Price",
+    "totalPrice": "Total",
+    "orderTotal": "Order total",
+    "customerDetails": "Personal data"
+  }
+}

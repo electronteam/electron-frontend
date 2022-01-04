@@ -244,6 +244,13 @@ img
     transform: translateY(-2px);
 }
 
+.top_bar_select_language
+{
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 42px;
+}
+
 .footer
 {
     width: 100%;
