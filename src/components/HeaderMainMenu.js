@@ -125,7 +125,9 @@ class HeaderMainMenu extends Component {
                            render={(props) => <Cart {...props} displayCurrentCartCount={this.displayCurrentCartCount}/>}
                     />
                     <Route path={properties.checkout.path} exact={true} component={Checkout}/>
-                    <Route path={properties.thankyou.path} exact={true} component={ThankYou}/>
+                    <Route path={properties.thankyou.path} exact={true}
+                           render={(props) => <ThankYou {...props} displayCurrentCartCount={this.displayCurrentCartCount}/>}
+                    />
                 </BrowserRouter>
         );
     }

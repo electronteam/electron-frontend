@@ -7,12 +7,14 @@ import {withTranslation} from 'react-i18next';
 
 class ThankYou extends Component {
 
-    constructor()
+    constructor(props)
     {
-        super();
+        super(props);
         this.state = {
             order: null,
         };
+
+        this.props.displayCurrentCartCount();
     }
 
     componentDidMount()
