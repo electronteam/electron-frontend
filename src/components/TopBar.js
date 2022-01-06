@@ -20,6 +20,7 @@ export function TopBar()
             <div className="top_bar">
                 <div className="container">
                     <div className="row">
+                        {/*TODO - extract language selector into a separate component*/}
                         <div className="top_bar_select_language">
                             <NavDropdown title={t('language')} id="basic-nav-dropdown">
                                 <NavDropdown.Item href="#" onClick={() => changeLocale('en')}>English</NavDropdown.Item>
