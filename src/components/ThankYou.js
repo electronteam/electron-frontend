@@ -19,7 +19,7 @@ class ThankYou extends Component {
 
     componentDidMount()
     {
-        let api = properties.api.lastPlacedOrder;
+        let api = process.env.REACT_APP_LAST_PLACED_ORDER;
 
         fetch(api, {credentials: 'include'})
                 .then(response => response.json())

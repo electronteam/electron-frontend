@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import {properties} from "../properties";
 import '../styles/product.css';
 import ProductAddedPopup from "./ProductAddedPopup";
 import ProductImage from "./ProductImage";
@@ -22,7 +21,7 @@ class ProductView extends Component {
     componentDidMount()
     {
         const {match: {params}} = this.props;
-        let api = properties.api.productByCode + "/" + params.productCode;
+        let api = process.env.REACT_APP_PRODUCT_BY_CODE + "/" + params.productCode;
 
         fetch(api, {credentials: 'include'})
                 .then(response => response.json())
@@ -50,7 +49,7 @@ class ProductView extends Component {
     // inside outer function"this" keyword refers to window(??? or ProductView object) object
     addProductToCart(code, callback)
     {
-        let api = properties.api.addProductToCart;
+        let api = process.env.REACT_APP_ADD_PRODUCT_TO_CART;
         let formData = new FormData();
         formData.append('code', code);
 

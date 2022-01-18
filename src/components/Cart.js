@@ -28,7 +28,7 @@ class Cart extends Component {
 
     getCurrentCart()
     {
-        let api = properties.api.currentCart;
+        let api = process.env.REACT_APP_CURRENT_CART;
 
         fetch(api, {credentials: 'include'})
                 .then(response => response.json())
@@ -50,7 +50,7 @@ class Cart extends Component {
 
     deleteCartEntry(productCode, callback)
     {
-        let api = properties.api.deleteCartEntry + "/" + productCode;
+        let api = process.env.REACT_APP_DELETE_CART_ENTRY + "/" + productCode;
 
         fetch(api, {
             method: 'post',
@@ -62,7 +62,7 @@ class Cart extends Component {
 
     updateCart(productCode, newQty, callback)
     {
-        let api = properties.api.updateCart;
+        let api = process.env.REACT_APP_UPDATE_CART;
         let formData = new FormData();
         formData.append('productCode', productCode);
         formData.append('newQty', newQty);

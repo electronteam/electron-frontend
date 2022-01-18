@@ -28,7 +28,7 @@ class Checkout extends Component {
 
     placeOrder(callback)
     {
-        let api = properties.api.placeOrder;
+        let api = process.env.REACT_APP_PLACE_ORDER;
         let formData = new FormData();
         formData.append('name', this.state.name);
         formData.append('lastName', this.state.lastName);

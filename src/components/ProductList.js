@@ -20,7 +20,7 @@ class ProductList extends Component {
 
         if (this.props.searchTerm)
         {
-            api = properties.api.searchProducts + "/?" + properties.search.term + "=" + this.props.searchTerm;
+            api = process.env.REACT_APP_SEARCH_PRODUCTS + "/?" + properties.search.term + "=" + this.props.searchTerm;
         }
 
         fetch(api, {credentials: 'include'})

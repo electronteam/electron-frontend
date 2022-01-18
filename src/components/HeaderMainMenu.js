@@ -25,7 +25,7 @@ class HeaderMainMenu extends Component {
 
     displayCurrentCartCount()
     {
-        let api = properties.api.currentCartCount;
+        let api = process.env.REACT_APP_CURRENT_CART_COUNT;
 
         fetch(api, {credentials: 'include'})
                 .then(response => response.json())

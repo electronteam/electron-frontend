@@ -58,20 +58,5 @@ export const properties = {
         path: "/search",
         term: "term",
         component: SearchResults
-    },
-    api: {
-        allProducts: "http://localhost:8080/api/solr/products",
-        searchProducts: "http://localhost:8080/api/solr/searchProducts",
-        productByCode: "http://localhost:8080/api/product",
-        addProductToCart: "http://localhost:8080/api/addtocart",
-        deleteCartEntry: "http://localhost:8080/api/currentCart/deleteEntry",
-        updateCart: "http://localhost:8080/api/currentCart/update",
-        currentCart: "http://localhost:8080/api/currentCart",
-        currentCartCount: "http://localhost:8080/api/currentCart/count",
-        placeOrder: "http://localhost:8080/api/placeOrder",
-        lastPlacedOrder: "http://localhost:8080/api/lastPlacedOrder"
-    },
-    url: {
-        imageServerURL: "http://localhost:8080/"
     }
 };
