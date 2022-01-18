@@ -16,7 +16,7 @@ class ProductList extends Component {
 
     componentDidMount()
     {
-        let api = properties.api.allProducts;
+        let api = process.env.REACT_APP_ALL_PRODUCTS;
 
         if (this.props.searchTerm)
         {
