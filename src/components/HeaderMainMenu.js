@@ -84,7 +84,7 @@ class HeaderMainMenu extends Component {
                         </div>
 
                         {/*Navigation menu*/}
-                        <nav className="site-navigation text-right text-md-center" role="navigation">
+                        <nav className="site-navigation text-center text-md-center" role="navigation">
                             <ul className="main-nav">
                                 {properties.header.links.map((link, index) => {
                                     return (
