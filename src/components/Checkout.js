@@ -67,7 +67,7 @@ class Checkout extends Component {
                                 <div className="form-group row text-left">
                                     <label htmlFor="name" className="col-sm-3 col-form-label">{this.props.t('checkout.customerName')}</label>
                                     <div className="col-sm-9">
-                                        <input type="text" className="checkout_input" size="30"
+                                        <input type="text" className="checkout_input" size="26"
                                                id="name"
                                                name="name"
                                                required="required"
@@ -78,7 +78,7 @@ class Checkout extends Component {
                                 <div className="form-group row text-left">
                                     <label htmlFor="lastName" className="col-sm-3 col-form-label">{this.props.t('checkout.customerLastName')}</label>
                                     <div className="col-sm-9">
-                                        <input type="text" className="checkout_input" size="30"
+                                        <input type="text" className="checkout_input" size="26"
                                                id="lastName"
                                                name="lastName"
                                                required="required"
@@ -89,7 +89,7 @@ class Checkout extends Component {
                                 <div className="form-group row text-left">
                                     <label htmlFor="email" className="col-sm-3 col-form-label">{this.props.t('checkout.customerEmail')}</label>
                                     <div className="col-sm-9">
-                                        <input type="text" className="checkout_input" size="30"
+                                        <input type="text" className="checkout_input" size="26"
                                                id="email"
                                                name="email"
                                                required="required"
@@ -100,7 +100,7 @@ class Checkout extends Component {
                                 <div className="form-group row text-left">
                                     <label htmlFor="address" className="col-sm-3 col-form-label">{this.props.t('checkout.customerCity')}</label>
                                     <div className="col-sm-9">
-                                        <input type="text" className="checkout_input" size="30"
+                                        <input type="text" className="checkout_input" size="26"
                                                id="city"
                                                name="city"
                                                required="required"
@@ -111,7 +111,7 @@ class Checkout extends Component {
                                 <div className="form-group row text-left">
                                     <label htmlFor="address" className="col-sm-3 col-form-label">{this.props.t('checkout.customerStreet')}</label>
                                     <div className="col-sm-9">
-                                        <input type="text" className="checkout_input" size="30"
+                                        <input type="text" className="checkout_input" size="26"
                                                id="street"
                                                name="street"
                                                required="required"
@@ -122,7 +122,7 @@ class Checkout extends Component {
                                 <div className="form-group row text-left">
                                     <label htmlFor="phone" className="col-sm-3 col-form-label">{this.props.t('checkout.customerPhone')}</label>
                                     <div className="col-sm-9">
-                                        <input type="text" className="checkout_input" size="30"
+                                        <input type="text" className="checkout_input" size="26"
                                                id="phone"
                                                name="phone"
                                                required="required"

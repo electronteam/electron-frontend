@@ -25,12 +25,25 @@
         line-height: 0.75;
         margin-bottom: 40px;
     }
+
+    .checkout_input
+    {
+        height: 45px;
+        background: #FFFFFF;
+        border: solid 1px #AFAFAF;
+        outline: none;
+        box-sizing: border-box;
+        color: #000000;
+        padding-left: 20px;
+        -webkit-border-radius: 5px;
+    }
 }
 
 @media (max-width: 414px){
     .checkout_form_container
     {
         width: 100%;
+        padding-left: 10px;
 
         /*Combination below centers div inside another div*/
         position: relative;
@@ -58,6 +71,18 @@
     .col-form-label {
         margin-left: 12px;
     }
+
+    .checkout_input
+    {
+        height: 45px;
+        background: #FFFFFF;
+        border: solid 1px #AFAFAF;
+        outline: none;
+        box-sizing: border-box;
+        color: #000000;
+        padding-left: 20px;
+        -webkit-border-radius: 5px;
+    }
 }
 
 .checkout
@@ -65,18 +90,6 @@
     background: #FFFFFF;
     padding-top: 10px;
     padding-bottom: 10px;
-}
-
-.checkout_input
-{
-    height: 45px;
-    background: #FFFFFF;
-    border: solid 1px #AFAFAF;
-    outline: none;
-    box-sizing: border-box;
-    color: #000000;
-    padding-left: 20px;
-    -webkit-border-radius: 5px;
 }
 
 .checkout_input::-webkit-input-placeholder
