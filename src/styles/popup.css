@@ -1,3 +1,45 @@
+@media (max-width: 1680px) {
+    .popup_inner {
+        position: absolute;
+        left: 33%;
+        right: 33%;
+        top: 35%;
+        bottom: 35%;
+        margin: auto;
+        border-radius: 20px;
+        background: white;
+    }
+
+    .popup-text .actions {
+        margin-top: 20px;
+    }
+
+    .popup-text .actions button {
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 414px) {
+    .popup_inner {
+        position: absolute;
+        left: 5%;
+        right: 5%;
+        top: 35%;
+        bottom: 35%;
+        margin: auto;
+        border-radius: 20px;
+        background: white;
+    }
+
+    .popup-text .actions {
+        margin-top: 20px;
+    }
+
+    .popup-text .actions button {
+        margin-right: 20px;
+    }
+}
+
 .popup {
     position: fixed;
     width: 100%;
@@ -7,17 +49,7 @@
     right: 0;
     bottom: 0;
     margin: auto;
-    background-color: rgba(0,0,0, 0.5);
-}
-.popup_inner {
-    position: absolute;
-    left: 33%;
-    right: 33%;
-    top: 35%;
-    bottom: 35%;
-    margin: auto;
-    border-radius: 20px;
-    background: white;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .close {
@@ -28,9 +60,11 @@
     height: 16px;
     opacity: 0.3;
 }
+
 .close:hover {
     opacity: 1;
 }
+
 .close:before, .close:after {
     position: absolute;
     left: 15px;
@@ -39,9 +73,11 @@
     width: 2px;
     background-color: #333;
 }
+
 .close:before {
     transform: rotate(45deg);
 }
+
 .close:after {
     transform: rotate(-45deg);
 }
@@ -63,13 +99,4 @@
     width: 35px;
     position: absolute;
     top: 24%;
-}
-
-.popup-text .actions {
-    margin-top: 60px;
-
-}
-
-.popup-text .actions button {
-    margin-right: 20px;
 }

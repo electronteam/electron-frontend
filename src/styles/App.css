@@ -132,6 +132,7 @@
         color: #FFFFFF;
         padding-left: 35px;
         padding-right: 35px;
+        margin-top: 5px;
         outline: none;
         cursor: pointer;
     }
@@ -265,6 +266,7 @@
         color: #FFFFFF;
         padding-left: 15px;
         padding-right: 15px;
+        margin-top: 5px;
         outline: none;
         cursor: pointer;
     }
