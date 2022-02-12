@@ -24,12 +24,6 @@ export const properties = {
                 component: Category
             },
             {
-                id: "electrical",
-                path: "/electrical",
-                isCategoryLink: true,
-                component: Category
-            },
-            {
                 id: "articles",
                 path: "/articles",
                 component: Articole
