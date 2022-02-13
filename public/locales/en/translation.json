@@ -60,7 +60,7 @@
     "customerPhonePlaceholder": "e.g.: 07911 123456"
   },
   "thankyou": {
-    "header": "ORDER SUCCESSFULLY PLACED !",
+    "header": "Order successfully placed !",
     "orderNrText": "Order number is:",
     "noOrderDisplayText": "No orders were placed in your session",
     "orderedItem": "Ordered product",

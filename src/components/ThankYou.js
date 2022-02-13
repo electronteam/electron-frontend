@@ -39,10 +39,8 @@ class ThankYou extends Component {
                 <div className="container text-left justify-content-center thankyou">
                     {this.state.order ?
                             <div>
-                                <h2>{this.props.t('thankyou.header')}</h2>
-                                {this.props.t('thankyou.orderNrText')} <strong>{this.state.order.id}</strong>
-                                <br/>
-                                <br/>
+                                <p>{this.props.t('thankyou.header')}</p>
+                                <p>{this.props.t('thankyou.orderNrText')} <strong>{this.state.order.id}</strong></p>
 
                                 <table className="order_details">
                                     <thead>
@@ -51,7 +49,7 @@ class ThankYou extends Component {
                                             {this.props.t('thankyou.orderedItem')}
                                         </th>
                                         <th>
-                                            {this.props.t('thankyou.price')}
+                                            <span className="priceLabel">{this.props.t('thankyou.price')}</span>
                                         </th>
                                         <th className="text-center">
                                             {this.props.t('thankyou.quantity')}
@@ -76,7 +74,7 @@ class ThankYou extends Component {
                                                         {entry.product.name}
                                                     </td>
                                                     <td>
-                                                        {entry.product.price} {this.props.t('currency')}
+                                                        <span className="price">{entry.product.price} {this.props.t('currency')}</span>
                                                     </td>
                                                     <td className="text-center">
                                                         {entry.quantity}
@@ -88,13 +86,9 @@ class ThankYou extends Component {
                                         )
                                     })}
                                     <tr className="price_row">
-                                        <td colSpan="4" className="text-right">
-                                            {this.props.t('thankyou.orderTotal')}
-                                        </td>
-                                        <td className="text-center">
-                                            <strong>
-                                                {this.state.order.totalPrice} {this.props.t('currency')}
-                                            </strong>
+                                        <td colSpan="5" className="text-right">
+                                            {this.props.t('thankyou.orderTotal')}&nbsp;
+                                            <strong>{this.state.order.totalPrice} {this.props.t('currency')}</strong>
                                         </td>
                                     </tr>
                                     </tbody>

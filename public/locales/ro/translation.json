@@ -60,14 +60,14 @@
     "customerPhonePlaceholder": "de ex: 069497268"
   },
   "thankyou": {
-    "header": "COMANDA A FOST PLASATĂ CU SUCCES !",
+    "header": "Comanda a fost plasată cu succes !",
     "orderNrText": "Numărul comenzii este:",
     "noOrderDisplayText": "In sesiunea dumneavoastră nu a fost plasată nici o comandă",
-    "orderedItem": "Produsul comandat",
-    "quantity": "Cantitatea",
+    "orderedItem": "Produs comandat",
+    "quantity": "Cantitate",
     "price": "Preț",
     "totalPrice": "Total",
-    "orderTotal": "Total comandă",
+    "orderTotal": "Total comandă:",
     "customerDetails": "Datele personale"
   }
 }
