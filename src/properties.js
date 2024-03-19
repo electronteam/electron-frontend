@@ -15,7 +15,8 @@ export const properties = {
             {
                 id: "main",
                 path: "/",
-                component: Principala
+                component: Principala,
+                //show: true - uncomment this line to display the header link
             },
             {
                 id: "electronics",

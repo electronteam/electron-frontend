@@ -87,13 +87,16 @@ class HeaderMainMenu extends Component {
                         <nav className="site-navigation text-center text-md-center" role="navigation">
                             <ul className="main-nav">
                                 {properties.header.links.map((link, index) => {
-                                    return (
-                                            <li key={index}>
-                                                <Link to={link.path} className="link">
-                                                    {this.props.t('header.' + link.id + '.display')}
-                                                </Link>
-                                            </li>
-                                    )
+                                    if(link.show)
+                                    {
+                                        return (
+                                                <li key={index}>
+                                                    <Link to={link.path} className="link">
+                                                        {this.props.t('header.' + link.id + '.display')}
+                                                    </Link>
+                                                </li>
+                                        )
+                                    }
                                 })}
                             </ul>
                         </nav>
