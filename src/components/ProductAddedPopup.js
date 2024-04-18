@@ -11,7 +11,7 @@ class ProductAddedPopup extends Component {
         return (
                 <div className="popup">
                     <div className="popup_inner">
-                        <a href="#" className="close" onClick={this.props.closePopup}>Close</a>
+                        <button className="close" onClick={this.props.closePopup}>Close</button>
                         <div className="popup-text">
                             <img src="/img/tick-icon.png" alt="" className="tick-icon"/>
                             <div className="popup_center">
