@@ -96,6 +96,9 @@ class HeaderMainMenu extends Component {
                                                     </Link>
                                                 </li>
                                         )
+                                    } else {
+                                      // Return a default value in case the condition isn't met
+                                      return null;
                                     }
                                 })}
                             </ul>

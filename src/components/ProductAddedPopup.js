@@ -11,6 +11,7 @@ class ProductAddedPopup extends Component {
         return (
                 <div className="popup">
                     <div className="popup_inner">
+                        {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
                         <a href="#" className="close" onClick={this.props.closePopup}/>
                         <div className="popup-text">
                             <img src="/img/tick-icon.png" alt="" className="tick-icon"/>
